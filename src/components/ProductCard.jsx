@@ -55,7 +55,7 @@ const ProductCard = () => {
           essential accessories
         </p>
 
-        <div className="grid grid-cols-2 w-full gap-5 sm:grid-cols-2 sm:w-full md:grid-cols-2 p-3 mx-auto md:w-full">
+        <div className="grid grid-cols-1 w-[95%] gap-5 sm:grid-cols-2 sm:w-full md:grid-cols-2 p-3 mx-auto md:w-full">
           {products.map((product, index) => (
             <div
               key={index}
