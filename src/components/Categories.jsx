@@ -36,8 +36,8 @@ const Categories = () => {
     },
   ];
 
-  const handleShowAllPlayStation = (event) => {
-    console.log("Showing all PlayStation", event.target);
+  const handleShowAllPlayStation = () => {
+    alert("🚧 This feature is still in development. Please check back later!");
   };
 
   return (

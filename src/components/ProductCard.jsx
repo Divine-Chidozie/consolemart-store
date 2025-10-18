@@ -41,7 +41,7 @@ const ProductCard = () => {
   };
 
   const handleViewAllProducts = () => {
-    console.log("View all Products here!");
+    alert("🚧 This feature is still in development. Please check back later!");
   };
 
   return (
@@ -78,7 +78,8 @@ const ProductCard = () => {
                   disabled
                   value={quantity[index]}
                   type="text"
-                  className="border text-center w-6"
+                  className="border text-center w-6 mr-2 font-bold
+                  "
                 />
                 <button
                   onClick={() => handleIncrease(index)}

@@ -1,7 +1,8 @@
 const NewsLetter = () => {
   const handleForm = (event) => {
     event.preventDefault();
-    console.log("Stay tuned for latest updates on new products.");
+    // console.log("Stay tuned for latest updates on new products.");
+    alert("Coming soon! We're working hard to bring this feature online 🚧");
   };
 
   return (

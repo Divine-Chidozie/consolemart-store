@@ -1,6 +1,9 @@
 import React from "react";
 
 const About = () => {
+  const handleViewAllProducts = () => {
+    alert("Coming soon! We're working hard to bring this feature online 🚧");
+  };
   return (
     <>
       <section className="grid gap-2 sm:grid-cols-1 md:grid-cols-1 w-4/5 p-3 mx-auto">
@@ -33,7 +36,10 @@ const About = () => {
             Your next adventure begins here. Browse the latest consoles,
             accessories, and more - all at unbeatable prices
           </p>
-          <button className="bg-black  text-white mt-3 py-2 px-4 rounded-lg hover:bg-zinc-400 transition">
+          <button
+            onClick={handleViewAllProducts}
+            className="bg-black  text-white mt-3 py-2 px-4 rounded-lg hover:bg-zinc-400 transition"
+          >
             View All Products
           </button>
         </div>

@@ -8,16 +8,15 @@ import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/Footer";
 import xboxseries from "../assets/xboxseries.png";
 
-const Home = () => {
+export default function Home() {
   const handleShopNow = () => {
-    console.log(`Purchase Made... Adding to Shopping Bag!`);
+    alert("Coming soon! We're working hard to bring this feature online 🚧");
   };
-
   return (
     <>
       <Navbar />
 
-      <section className="flex items-center justify-center">
+      <section className="flex items-center justify-center mt-10">
         <div className="md:grid md:grid-cols-2 gap-6  items-center w-[90%] md:w-[70%] mx-auto md:text-left">
           <div>
             <h1 className="text-4xl font-bold md:text-4xl leading-tight">
@@ -50,6 +49,4 @@ const Home = () => {
       <Footer />
     </>
   );
-};
-
-export default Home;
+}
