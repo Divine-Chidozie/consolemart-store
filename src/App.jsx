@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Signin from "./pages/Signin";
 
 function App() {
-  const [cart, setCart] = useState([]); // shared state
+  // const [cart, setCart] = useState([]); // shared state
 
   return (
-    // <Routes>
-    //   <Route path="/" element={<Home />} />
-    // </Routes>
-    <Home />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/signin" element={<Signin />} />
+    </Routes>
   );
 }
 

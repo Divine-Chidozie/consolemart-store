@@ -7,10 +7,6 @@ const Navbar = ({ cartCount = 0 }) => {
 
   const logoWidth = { width: "30px" };
 
-  const handleSignIn = () => {
-    alert("Coming soon! We're working hard to bring this feature online 🚧");
-  };
-
   const handleShop = () => {
     alert("We are still setting up the feature - coming soon!");
   };
@@ -73,7 +69,6 @@ const Navbar = ({ cartCount = 0 }) => {
             )}
           </Link>
           <Link
-            onClick={handleSignIn}
             to="/signin"
             className="bg-black text-white py-2 px-4 ml-4 rounded-lg hover:bg-zinc-400 transition"
           >
@@ -143,7 +138,6 @@ const Navbar = ({ cartCount = 0 }) => {
           </Link>
 
           <Link
-            onClick={handleSignIn}
             to="/signin"
             className="bg-black text-white py-2 px-4 rounded-lg text-center hover:bg-zinc-400 transition"
           >
