@@ -47,27 +47,31 @@ const ProductCard = () => {
   return (
     <section>
       <div className="px-6 py-12">
-        <h2 className="text-2xl font-bold text-center">Featured Gaming Gear</h2>
-        <p className="text-center mb-6">
+        <h2 className="text-2xl font-bold text-center mb-2">
+          Featured Gaming Gear
+        </h2>
+        <p className="text-center mb-6 w-full">
           Explore our top picks in gaming - from the latest consoles to
           essential accessories
         </p>
 
-        <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-2 w-3/5 p-3 mx-auto">
+        <div className="grid grid-cols-2 w-full gap-5 sm:grid-cols-2 sm:w-full  md:grid-cols-2 p-3 mx-auto md:w-full">
           {products.map((product, index) => (
             <div
               key={index}
-              className="border flex flex-col justify-center items-center rounded-xl p-4 shadow hover:shadow-lg transition"
+              className="border grid rounded-xl p-4 flex flex-col justify-center items-center shadow hover:shadow-lg transition"
             >
               <img
-                className="w-full h-48 object-contain"
+                className="w-52 h-48 object-contain"
                 src={product.productImage}
                 alt={product.productAlt}
               />
-              <h4 className="font-medium mt-2">{product.productName}</h4>
-              <p className="mt-1">{product.productPrice}</p>
+              <h4 className="font-medium mt-2 text-center">
+                {product.productName}
+              </h4>
+              <p className="mt-1 text-center">{product.productPrice}</p>
 
-              <div>
+              <div className=" w-3/5 text-center mx-auto md:w-full">
                 <button
                   onClick={() => handleDecrease(index)}
                   className="bg-zinc-400 text-white px-2 rounded-lg mt-3 mr-2"
@@ -97,10 +101,10 @@ const ProductCard = () => {
             </div>
           ))}
 
-          <div className="flex items-center justify-self-center mb-10">
+          <div className="col-span-full w-full flex justify-center">
             <button
               onClick={handleViewAllProducts}
-              className="bg-black text-white mt-3 py-2 px-4 rounded-lg hover:bg-zinc-400 transition"
+              className="col-span-full bg-black text-white w-[200px] py-2 px-8 rounded-lg hover:bg-zinc-400 transition"
             >
               View All Products
             </button>

@@ -7,11 +7,7 @@ const Footer = () => {
       <div className="grid md:grid-cols-4 gap-6">
         {/* Logo & Tagline */}
         <div>
-          <img
-            className="w-32 mb-4 cursor-pointer"
-            src={logo}
-            alt="footer logo image"
-          />
+          <img className="w-14 mb-4" src={logo} alt="footer logo image" />
           <p>Your #1 Gaming Store</p>
         </div>
 

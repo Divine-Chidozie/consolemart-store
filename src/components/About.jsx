@@ -1,47 +1,51 @@
 import React from "react";
 
 const About = () => {
-  const handleViewAllProducts = () => {
-    alert("Coming soon! We're working hard to bring this feature online 🚧");
-  };
   return (
     <>
-      <section className="grid gap-2 sm:grid-cols-1 md:grid-cols-1 w-4/5 p-3 mx-auto">
-        <div className="flex flex-col justify-center items-center">
-          <h2 className="text-2xl font-bold text-center">
-            Why Choose ConsoleMart?
-          </h2>
-          <p className="text-black mt-4 text-lg">
+      <section className="px-6 py-12 bg-gray-50">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Why Choose ConsoleMart?</h2>
+          <p className="text-gray-700 mb-8">
             At ConsoleMart, we believe gaming should be seamless, exciting, and
             affordable. That's why we bring top-quality consoles, fast delivery,
-            and trusted customer service together-so you can focus on the game.
+            and trusted customer service together—so you can focus on the game.
           </p>
-        </div>
 
-        <div className="flex flex-col justify-center items-center my-5">
-          <p className="text-lg">
-            Wide Range of Products - from PlayStation to Nintendo
-          </p>
-          <p className="text-lg">
-            Fast & Reliable Delivery - get your gear quicky
-          </p>
-          <p className="text-lg">24/7 Support - we're always here for you</p>
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+              <h3 className="font-bold text-xl mb-2">Wide Range of Products</h3>
+              <p>
+                From PlayStation to Nintendo, we have the consoles and
+                accessories you need.
+              </p>
+            </div>
 
-        <div className="flex flex-col justify-center items-center mb-10">
-          <h2 className="text-xl font-semibold text-center">
-            Ready to Upgrade Your Gaming Setup?
-          </h2>
-          <p className="text-lg">
-            Your next adventure begins here. Browse the latest consoles,
-            accessories, and more - all at unbeatable prices
-          </p>
-          <button
-            onClick={handleViewAllProducts}
-            className="bg-black  text-white mt-3 py-2 px-4 rounded-lg hover:bg-zinc-400 transition"
-          >
-            View All Products
-          </button>
+            <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+              <h3 className="font-bold text-xl mb-2">
+                Fast & Reliable Delivery
+              </h3>
+              <p>
+                Get your gear quickly and safely with our trusted delivery
+                service.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+              <h3 className="font-bold text-xl mb-2">24/7 Support</h3>
+              <p>We're always here to help you with any questions or issues.</p>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <h3 className="text-2xl font-semibold mb-2">
+              Ready to Upgrade Your Gaming Setup?
+            </h3>
+            <p className="text-gray-700">
+              Your next adventure begins here. Browse the latest consoles,
+              accessories, and more—all at unbeatable prices.
+            </p>
+          </div>
         </div>
       </section>
     </>

@@ -47,27 +47,32 @@ const Categories = () => {
           <h2 className="text-2xl font-bold mb-6 text-center">
             Explore by Catogory
           </h2>
-          <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 cursor-pointer">
+          <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 cursor-pointer w-full ">
             {categories.map((categorie, index) => (
               <div
                 key={index}
-                className="flex flex-col gap-2 p-4 border rounded-lg hover:shadow-lg transition"
+                className="flex flex-col items-center gap-2 p-4 border rounded-lg hover:shadow-lg transition"
               >
                 <img
                   className="w-32 h-32 object-contain"
                   src={categorie.categoryImage}
                   alt={categorie.categorieAlt}
                 />
-                <p className="font-medium">{categorie.categoryName}</p>
-                <p className="text-left text-sm">{categorie.tagLine}</p>
+                <p className="font-bold w-full text-center">
+                  {categorie.categoryName}
+                </p>
+                <p className="text-sm text-center w-full">
+                  {categorie.tagLine}
+                </p>
               </div>
             ))}
-            <div>
+
+            <div className="col-span-full w-full flex justify-center">
               <button
                 onClick={handleShowAllPlayStation}
-                className="bg-black max-w-full text-white mt-3 py-2 px-4  rounded-lg hover:bg-zinc-400 transition"
+                className="bg-black text-white w-[200px] mt-3 py-2 px-8 rounded-lg hover:bg-zinc-400 transition"
               >
-                Show All PlayStation
+                All PlayStation
               </button>
             </div>
           </div>
