@@ -46,7 +46,7 @@ const ProductCard = () => {
 
   return (
     <section>
-      <div className="px-6 py-12">
+      <div className="px-6 py-12  w-full">
         <h2 className="text-2xl font-bold text-center mb-2">
           Featured Gaming Gear
         </h2>
@@ -55,11 +55,11 @@ const ProductCard = () => {
           essential accessories
         </p>
 
-        <div className="grid grid-cols-2 w-full gap-5 sm:grid-cols-2 sm:w-full  md:grid-cols-2 p-3 mx-auto md:w-full">
+        <div className="grid grid-cols-2 w-full gap-5 sm:grid-cols-2 sm:w-full md:grid-cols-2 p-3 mx-auto md:w-full">
           {products.map((product, index) => (
             <div
               key={index}
-              className="border grid rounded-xl p-4 flex flex-col justify-center items-center shadow hover:shadow-lg transition"
+              className="border rounded-xl p-4 flex flex-col w-full justify-center items-center shadow hover:shadow-lg transition"
             >
               <img
                 className="w-52 h-48 object-contain"
@@ -71,7 +71,7 @@ const ProductCard = () => {
               </h4>
               <p className="mt-1 text-center">{product.productPrice}</p>
 
-              <div className=" w-3/5 text-center mx-auto md:w-full">
+              <div className="w-full text-center">
                 <button
                   onClick={() => handleDecrease(index)}
                   className="bg-zinc-400 text-white px-2 rounded-lg mt-3 mr-2"
