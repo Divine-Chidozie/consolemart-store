@@ -50,7 +50,7 @@ const Signin = () => {
   };
 
   return (
-    <section className="w-2/5 my-24 mx-auto shadow-xl p-10 text-center">
+    <section className="w-full md:w-2/5 my-24 mx-auto p-10 text-center">
       <div className="flex flex-col justify-center items-center mb-5">
         <h1 className="font-bold text-2xl">Sign in</h1>
         <p className="font-normal mt-2">
@@ -63,7 +63,7 @@ const Signin = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col justify-center items-center p-5 shadow-lg drop-shadow-2xl shadow-slate-700"
+        className="flex flex-col justify-center items-center p-5 shadow-lg drop-shadow-2xl shadow-slate-300"
       >
         <input
           type="email"
