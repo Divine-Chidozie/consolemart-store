@@ -63,14 +63,14 @@ const Signin = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="bg-red-500 w-full flex flex-col justify-center items-center p-5 shadow-lg drop-shadow-2xl shadow-slate-300"
+        className="w-full flex flex-col justify-center items-center p-5 shadow-lg drop-shadow-2xl shadow-slate-300"
       >
         <input
           type="email"
           value={email}
           onChange={handleEmailChange}
           placeholder="✉️ Email Address"
-          className="w-[80%] border-2 border-gray-200 py-2 pl-2 md:w-3/5 text-lg text-gray-700 outline-none mb-1"
+          className="w-[100%] bg-blue-900 border-2 border-gray-200 py-2 pl-2 md:w-3/5 text-lg text-gray-700 outline-none mb-1"
         />
         {emailError && (
           <p className="text-red-600 text-sm mb-3 font-bold">{emailError}</p>
@@ -81,7 +81,7 @@ const Signin = () => {
           value={password}
           onChange={handlePasswordChange}
           placeholder="  🔒 Password"
-          className="w-[80%] border-2 border-gray-200 mb-1 py-2 pl-2md:w-3/5 text-lg text-gray-700 outline-none"
+          className="w-[100%] bg-blue-900 border-2 border-gray-200 mb-1 py-2 pl-2md:w-3/5 text-lg text-gray-700 outline-none"
         />
         {passwordError && (
           <p className="text-red-600 text-sm mb-3 font-bold">{passwordError}</p>
