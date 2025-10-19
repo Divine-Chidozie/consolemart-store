@@ -51,7 +51,7 @@ const Signin = () => {
 
   return (
     <section className="w-full md:w-2/5 my-24 mx-auto p-10 text-center shadow-lg drop-shadow-2xl shadow-slate-300">
-      <div className="flex flex-col justify-center items-center mb-5 ">
+      <div className="flex flex-col justify-center items-center mb-5 w-full">
         <h1 className="font-bold text-2xl">Sign in</h1>
         <p className="font-normal mt-2">
           New user?{" "}
@@ -63,7 +63,7 @@ const Signin = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col justify-center items-center p-5 shadow-lg drop-shadow-2xl shadow-slate-300"
+        className="bg-red-500 w-full flex flex-col justify-center items-center p-5 shadow-lg drop-shadow-2xl shadow-slate-300"
       >
         <input
           type="email"
