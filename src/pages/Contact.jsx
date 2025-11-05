@@ -1,9 +1,22 @@
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
   function handleSubmit(e) {
     e.preventDefault();
+    console.log("Form working well...");
+  }
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  function handleEmailChange(event) {
+    setEmail(event.target.value);
   }
   return (
     <>
@@ -76,8 +89,10 @@ export default function Contact() {
             className="border border-black p-5 flex justify-center items-center flex-1 flex-col bg-gray-100"
           >
             <div className="flex flex-col mb-2">
-              <label className="text-sm">Full Name: here</label>
+              <label className="text-sm">Full Name</label>
               <input
+                onChange={handleNameChange}
+                value={name}
                 type="text"
                 name="name"
                 className="border border-black py-1 px-3 outline-none pl-2"
@@ -87,6 +102,8 @@ export default function Contact() {
             <div className="flex flex-col mb-2">
               <label className="text-sm">Email: </label>
               <input
+                onChange={handleEmailChange}
+                value={email}
                 type="text"
                 name="email"
                 className="border border-black py-1 px-3 outline-none pl-2 text-base"

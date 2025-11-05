@@ -23,6 +23,7 @@ const Cart = () => {
   function handleRemove(id) {
     const updatedCart = cartItems.filter((item) => item.id !== id);
     setCartItems(updatedCart);
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
   }
 
   const cartBackgroundColor = {
