@@ -22,7 +22,7 @@ export default function Home() {
             <h1 className="text-4xl font-bold  sm:text-black md:text-4xl leading-tight">
               Power Up Your Play-Discover the best Gaming Consoles & Accessories
             </h1>
-            <p className="text-gray-600 mt-4 text-lg font-mono">
+            <p className="text-gray-600 mt-4 text-lg">
               From PlayStation to Xbox to Nintendo, ConsoleMart brings you the
               best in gaming gear - all in one place.Level up your experience
               today!

@@ -1,10 +1,16 @@
+import { useState } from "react";
+
 const NewsLetter = () => {
+  const [input, setInput] = useState("");
   const handleForm = (event) => {
     event.preventDefault();
     // console.log("Stay tuned for latest updates on new products.");
-    alert("Coming soon! We're working hard to bring this feature online 🚧");
+    // alert("Coming soon! We're working hard to bring this feature online 🚧");
   };
 
+  function handleInput(event) {
+    setInput(event.target.value);
+  }
   return (
     <>
       <section className="px-6 py-12 bg-gray-100 text-center">
@@ -16,11 +22,16 @@ const NewsLetter = () => {
           className="flex justify-center mt-4 max-w-md mx-auto"
         >
           <input
+            onChange={handleInput}
+            value={input}
             className="flex-1 border border-zinc-200 px-4 py-2 rounded-1-lg outline-none"
             type="text"
-            placeholder="Enter your email"
+            placeholder="Enter your email..."
           />
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-1-lg hover:bg-blue-700">
+          <button
+            type="submit"
+            className="bg-blue-600 text-white px-4 py-2 rounded-1-lg hover:bg-blue-700"
+          >
             Subscribe
           </button>
         </form>

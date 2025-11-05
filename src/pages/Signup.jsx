@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 const Signup = () => {
   return (
-    <section className="w-full md:w-2/5 my-24 mx-auto flex flex-col justify-center items-center p-10 text-center shadow-lg drop-shadow-2xl shadow-slate-300">
+    <section className="max-w-96 md:w-2/5 my-24 mx-auto flex flex-col justify-center items-center p-10 text-center shadow-lg drop-shadow-2xl shadow-slate-300">
       <div className="flex flex-col justify-center items-center mb-5 w-full">
-        <h1 className="font-bold text-3xl">Sign Up Account</h1>
-        <p className="mt-3 text-lg">
+        <h1 className="font-bold text-2xl">Sign Up Account</h1>
+        <p className="mt-3 text-base text-left">
           Enter your persoanl details to create your account
         </p>
       </div>
@@ -13,43 +13,43 @@ const Signup = () => {
         <input
           type="text"
           placeholder="First Name"
-          className="w-full py-2 pl-2 text-[15px] text-gray-700 outline-none mb-1 border rounded-md border-slate-300"
+          className="w-full border-2 border-gray-800 py-1 pl-2 text-base  text-gray-700 outline-none mb-2"
         />
 
         <input
           type="text"
           placeholder="Last Name"
-          className="w-full py-2 pl-2 text-[15px] text-gray-700 outline-none mb-1 border rounded-md border-slate-300"
+          className="w-full border-2 border-gray-800 py-1 pl-2 text-base  text-gray-700 outline-none mb-2"
         />
 
         <input
           type="email"
           placeholder="Email Address"
-          className="w-full py-2 pl-2 text-[15px] text-gray-700 outline-none mb-1 border rounded-md border-slate-300"
+          className="w-full border-2 border-gray-800 py-1 pl-2 text-base  text-gray-700 outline-none mb-2"
         />
 
         <input
           type="password"
           placeholder="Password"
-          className="w-full border rounded-md border-slate-300 mb-1 py-2 pl-2 text-[15px] text-gray-700 outline-none"
+          className="w-full border-2 border-gray-800 py-1 pl-2 text-base  text-gray-700 outline-none mb-2"
         />
 
-        <a href="#" className="mb-3">
+        <a href="#" className="mb-3 text-sm mt-2 text-blue-700">
           Forget password?
         </a>
 
         <button
           type="submit"
-          className="bg-black w-2/4 text-white py-2 px-4 rounded-lg text-center hover:bg-zinc-400 transition"
+          className="bg-black w-full text-white py-2 px-4 text-center"
         >
-          Login
+          Sign Up
         </button>
       </form>
-      <p className="font-normal mt-2">
+      <p className="text-sm mt-2">
         Already have an Account?{" "}
         <Link
           to="/signin"
-          className="text-lg font-bold underline underline-offset-2"
+          className="text-base text-blue-700 underline underline-offset-2"
         >
           Sign in
         </Link>

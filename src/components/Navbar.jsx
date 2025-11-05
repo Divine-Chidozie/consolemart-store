@@ -1,27 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
-const Navbar = ({ cartCount = 0 }) => {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    const updateCartCount = () => {
+      const savedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
+      setCartCount(savedCart.length);
+    };
+    updateCartCount();
+
+    window.addEventListener("storage", updateCartCount);
+    return () => window.removeEventListener("storage", updateCartCount);
+  }, []);
 
   const logoWidth = { width: "30px" };
-
-  const handleShop = () => {
-    alert("We are still setting up the feature - coming soon!");
-  };
-
-  const handleAbout = () => {
-    alert("This feature is almost ready. Stay tuned for updates!");
-  };
-
-  const handleContact = () => {
-    alert("This feature is almost ready. Stay tuned for updates!");
-  };
-
-  const handleCart = () => {
-    alert("We're still setting up this feature - coming soon! 🚧");
-  };
 
   return (
     <>
@@ -38,28 +34,21 @@ const Navbar = ({ cartCount = 0 }) => {
             <Link to="/">Home</Link>
           </li>
           <li className="hover:text-blue-500 transition">
-            <Link onClick={handleShop} to="/shop">
-              Shop
-            </Link>
+            <Link to="/shop">Shop</Link>
           </li>
           <li className="hover:text-blue-500 transition">
-            <a onClick={handleAbout} href="/">
-              About
-            </a>
+            <Link to="/about">About</Link>
           </li>
           <li className="hover:text-blue-500 transition">
-            <a onClick={handleContact} href="/">
-              Contact
-            </a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
 
         {/* Desktop Right Side */}
         <div className="hidden md:flex items-center">
           <Link
-            onClick={handleCart}
-            to="/cartpage"
-            className="relative text-lg"
+            to="/cart"
+            className="relative text-lg hover:scale-75 transition"
           >
             🛒
             {cartCount > 0 && (
@@ -70,7 +59,7 @@ const Navbar = ({ cartCount = 0 }) => {
           </Link>
           <Link
             to="/signin"
-            className="bg-black text-white py-2 px-4 ml-4 rounded-lg hover:bg-zinc-400 transition"
+            className="bg-black text-white py-2 px-4 ml-4 rounded-sm hover:bg-zinc-400 transition"
           >
             Sign In
           </Link>
@@ -106,29 +95,19 @@ const Navbar = ({ cartCount = 0 }) => {
             </Link>
           </li>
           <li className="hover:text-blue-500 transition w-full">
-            <Link onClick={handleShop} to="/shop">
-              Shop
-            </Link>
+            <Link to="/shop">Shop</Link>
           </li>
           <li className="hover:text-blue-500 transition w-full">
-            <a onClick={handleAbout} href="/">
-              About
-            </a>
+            <Link to="/about">About</Link>
           </li>
           <li className="hover:text-blue-500 transition w-full">
-            <a onClick={handleContact} href="/">
-              Contact
-            </a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
 
         {/* Cart and Sign In */}
         <div className="mt-6 px-6 flex flex-col gap-4">
-          <Link
-            onClick={handleCart}
-            to="/cartpage"
-            className="relative text-lg"
-          >
+          <Link to="/cart" className="relative text-lg">
             🛒 Cart
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-4 bg-red-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
@@ -139,7 +118,7 @@ const Navbar = ({ cartCount = 0 }) => {
 
           <Link
             to="/signin"
-            className="bg-black text-white py-2 px-4 rounded-lg text-center hover:bg-zinc-400 transition"
+            className="bg-black text-white py-2 px-4 rounded-sm text-center hover:bg-zinc-400 transition"
           >
             Sign In
           </Link>
