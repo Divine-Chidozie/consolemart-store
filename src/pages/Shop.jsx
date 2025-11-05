@@ -19,7 +19,7 @@ import nintendocontroller from "../assets/controllers/nintendocontroller.png";
 
 // Headset & Audio
 import HyperXCloudGamingHeadset from "../assets/HeadsetsandAudio/HyperXCloudGamingHeadset.png";
-import NintendoSwitchEarbuds from "../assets/HeadsetsandAudio/NNintendoSwitchEarbuds.png";
+import NintendoSwitchEarbuds from "../assets/HeadsetsandAudio/NintendoSwitchEarbuds.png";
 import PlayStationGoldHeadsetPS4 from "../assets/HeadsetsandAudio/PlayStationGoldHeadsetPS4.png";
 import Pulse3DWirelessHeadsetPS5 from "../assets/HeadsetsandAudio/Pulse3DWirelessHeadsetPS5.png";
 import XboxStereoHeadset from "../assets/HeadsetsandAudio/XboxStereoHeadset.png";
