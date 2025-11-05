@@ -76,7 +76,7 @@ export default function Contact() {
             className="border border-black p-5 flex justify-center items-center flex-1 flex-col bg-gray-100"
           >
             <div className="flex flex-col mb-2">
-              <label className="text-sm">Full Name: </label>
+              <label className="text-sm">Full Name: here</label>
               <input
                 type="text"
                 name="name"
