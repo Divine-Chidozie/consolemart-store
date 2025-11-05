@@ -19,7 +19,7 @@ import nintendocontroller from "../assets/controllers/nintendocontroller.png";
 
 // Headset & Audio
 import HyperXCloudGamingHeadset from "../assets/HeadsetsandAudio/HyperXCloudGamingHeadset.png";
-import NintendoSwitchEarBuds from "../assets/HeadsetsandAudio/NintendoSwitchEarBuds.png";
+import NintendoSwitchEarbuds from "../assets/HeadsetsandAudio/NNintendoSwitchEarbuds.png";
 import PlayStationGoldHeadsetPS4 from "../assets/HeadsetsandAudio/PlayStationGoldHeadsetPS4.png";
 import Pulse3DWirelessHeadsetPS5 from "../assets/HeadsetsandAudio/Pulse3DWirelessHeadsetPS5.png";
 import XboxStereoHeadset from "../assets/HeadsetsandAudio/XboxStereoHeadset.png";
@@ -330,7 +330,7 @@ const Shop = () => {
     },
     {
       id: 14,
-      shopProductImage: NintendoSwitchEarBuds,
+      shopProductImage: NintendoSwitchEarbuds,
       shopProductName: "Nintendo Switch Earbuds",
       shopProductPrice: "₦150,000",
       shopProductAlt: "nintendo switch earbuds",
