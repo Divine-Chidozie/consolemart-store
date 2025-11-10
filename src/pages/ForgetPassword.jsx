@@ -18,13 +18,13 @@ export const ForgetPassword = () => {
         </div>
 
         <form onSubmit={handleSubmit} action="" className="p-5 w-full">
-          <div className="flex justify-center items-center w-full">
+          <div className="flex flex-col gap-2 justify-center items-center w-full">
             <input
               type="text"
               placeholder="Enter email address..."
               className="outline-none border-gray-200 border py-1 px-2 focus:outline-offset-1 focus:outline-white mx-1"
             />
-            <button className="bg-black text-white border-none py-2 px-4 text-center text-sm">
+            <button className="bg-black  text-white border-none py-2 px-4 text-center text-sm">
               Reset Password
             </button>
           </div>
@@ -33,7 +33,7 @@ export const ForgetPassword = () => {
         <div className="text-sm">
           <p>
             Back to {""}
-            <Link to="/" className="text-blue-600">
+            <Link to="/" className="text-blue-600 underline">
               Home
             </Link>
           </p>
