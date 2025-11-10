@@ -5,7 +5,7 @@ const About = () => {
     <>
       <section className="px-6 py-12 bg-gray-50">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl font-light mb-4 w-full">
+          <h2 className="font-normal text-lg mb-4 w-full">
             Why Choose ConsoleMart?
           </h2>
           <p className="text-gray-700 mb-8 text-sm">
@@ -44,7 +44,7 @@ const About = () => {
           </div>
 
           <div className="mt-8">
-            <h3 className="text-xl font-light mb-2">
+            <h3 className="font-normal text-lg mb-2">
               Ready to Upgrade Your Gaming Setup?
             </h3>
             <p className="text-gray-700 text-sm">

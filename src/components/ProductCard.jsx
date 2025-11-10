@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import featureProduct1 from "../assets/featureProduct1.png";
 import featureProduct2 from "../assets/featureProduct2.png";
 
@@ -21,6 +22,7 @@ const ProductCard = () => {
   ];
 
   const [quantity, setQuantity] = useState(Array(products.length).fill(0));
+  const navigate = useNavigate();
 
   const handleIncrease = (index) => {
     const newQuantities = [...quantity];
@@ -41,16 +43,17 @@ const ProductCard = () => {
   };
 
   const handleViewAllProducts = () => {
-    alert("🚧 This feature is still in development. Please check back later!");
+    // alert("🚧 This feature is still in development. Please check back later!");
+    navigate("/shop");
   };
 
   return (
     <section>
       <div className="px-6 py-12  w-full">
-        <h2 className="text-2xl font-bold text-center mb-2">
+        <h2 className="font-normal text-lg text-center mb-2">
           Featured Gaming Gear
         </h2>
-        <p className="text-center mb-6 w-full">
+        <p className="text-center mb-6 w-full text-sm">
           Explore our top picks in gaming - from the latest consoles to
           essential accessories
         </p>
@@ -104,7 +107,7 @@ const ProductCard = () => {
           <div className="col-span-full w-full flex justify-center">
             <button
               onClick={handleViewAllProducts}
-              className="col-span-full bg-black text-white w-[200px] py-2 px-8 rounded-lg hover:bg-zinc-400 transition"
+              className="col-span-full shadow-md shadow-gray-300 bg-black text-white w-[200px] py-2 px-8 rounded-lg hover:bg-zinc-400"
             >
               View All Products
             </button>
