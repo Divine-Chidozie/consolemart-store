@@ -6,7 +6,7 @@ const Signin = () => {
   const [emailError, setEmailError] = useState("");
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const validateEmail = (value) => {
     if (!value.trim()) return "Please enter your email address";
@@ -52,7 +52,7 @@ const Signin = () => {
       <section className="max-w-96 md:w-2/5 my-24 mx-auto flex flex-col justify-center items-center p-10 text-center shadow-lg drop-shadow-2xl shadow-slate-300">
         <div className="flex flex-col justify-center items-center mb-5 w-full">
           <h1 className="font-bold text-2xl">Welcome Back!</h1>
-          <p className="mt-3 text-base">Enter your login information</p>
+          <p className="mt-1 text-base">Enter your login information</p>
         </div>
         <form
           onSubmit={handleSubmit}
@@ -82,9 +82,12 @@ const Signin = () => {
             </p>
           )}
 
-          <a href="#" className="mb-3 text-sm mt-2 text-blue-700">
+          <Link
+            to="/forgetpassword"
+            className="mb-3 text-sm mt-2 text-blue-700"
+          >
             Forget password?
-          </a>
+          </Link>
 
           <button
             type="submit"

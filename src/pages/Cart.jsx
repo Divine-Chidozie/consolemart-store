@@ -27,18 +27,22 @@ const Cart = () => {
   }
 
   const cartBackgroundColor = {
-    backgroundColor: "#111527",
+    // backgroundColor: "#111527",
+    width: "90%",
+    margin: "auto",
+    marginTop: "20px",
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)",
   };
 
   return (
     <>
       <Navbar />
       <div style={cartBackgroundColor}>
-        <section className="text-white py-5 px-10 flex flex-col justify-center items-center">
-          <h1 className="font-bold text-3xl mb-4">Your Cart</h1>
+        <section className="text-white  py-5 px-10 flex flex-col justify-center items-center">
+          <h1 className="font-bold text-black text-3xl mb-4">Your Cart</h1>
 
           {cartItems.length === 0 ? (
-            <p className="text-lg">Your cart is empty...</p>
+            <p className="text-lg text-black">Your cart is empty...</p>
           ) : (
             <ul>
               {cartItems.map((item, index) => (
@@ -57,7 +61,7 @@ const Cart = () => {
               ))}
             </ul>
           )}
-          <section className="my-2 py-4 px-2 rounded-md bg-slate-800 flex flex-row justify-between items-center gap-14">
+          <section className="my-2 py-4 px-2 rounded flex flex-row justify-between items-center gap-14">
             {cartItems.length > 0 && (
               <h2 className="font-semibold text-xl">
                 Total: ₦{totalPrice.toFixed(2)}

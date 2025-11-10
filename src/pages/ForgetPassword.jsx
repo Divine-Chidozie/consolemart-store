@@ -1,0 +1,44 @@
+import { Link } from "react-router-dom";
+
+export const ForgetPassword = () => {
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log("Form clicked");
+  }
+
+  return (
+    <>
+      <section className="md:w-2/5 my-24 mx-auto flex flex-col justify-center items-center p-10 text-center shadow-lg drop-shadow-2xl shadow-slate-300">
+        <div className="flex flex-col justify-center items-center mb-5 w-full">
+          <h1 className="font-bold text-2xl">Reset Your Password</h1>
+          <p className="mt-1 text-base">
+            Enter your email address and we'll send you a link to reset your
+            password
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} action="" className="p-5 w-full">
+          <div className="flex justify-center items-center w-full">
+            <input
+              type="text"
+              placeholder="Enter email address..."
+              className="outline-none border-gray-200 border py-1 px-2 focus:outline-offset-1 focus:outline-white mx-1"
+            />
+            <button className="bg-black text-white border-none py-2 px-4 text-center text-sm">
+              Reset Password
+            </button>
+          </div>
+        </form>
+
+        <div className="text-sm">
+          <p>
+            Back to {""}
+            <Link to="/" className="text-blue-600">
+              Home
+            </Link>
+          </p>
+        </div>
+      </section>
+    </>
+  );
+};

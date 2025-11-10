@@ -19,10 +19,10 @@ export default function Home() {
       <section className="flex items-center justify-center mt-10">
         <div className="md:grid md:grid-cols-2 gap-6  items-center w-[90%] md:w-[70%] mx-auto md:text-left">
           <div>
-            <h1 className="text-4xl font-bold  sm:text-black md:text-4xl leading-tight">
+            <h1 className="text-3xl font-bold  sm:text-black md:text-4xl leading-tight">
               Power Up Your Play-Discover the best Gaming Consoles & Accessories
             </h1>
-            <p className="text-gray-600 mt-4 text-lg">
+            <p className="text-gray-600 mt-4 text-md md:text-lg">
               From PlayStation to Xbox to Nintendo, ConsoleMart brings you the
               best in gaming gear - all in one place.Level up your experience
               today!

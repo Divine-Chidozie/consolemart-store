@@ -39,7 +39,7 @@ const Checkout = () => {
     <div style={{ backgroundColor: "#111527", height: "100vh" }}>
       <div className="text-white py-5 px-10 flex flex-col justify-center items-center">
         <h1 className="font-bold text-3xl mb-4 mt-10">Checkout Order</h1>
-        <div className="bg-slate-800 w-1/3 py-4 px-8 flex flex-col gap-x-3.5 items-center rounded-md">
+        <div className="bg-slate-800 w-full py-4 px-8 flex flex-col gap-x-3.5 items-center rounded-md md:w-2/5">
           <h2 className="text-xl mb-1 lowercase">Order Summary</h2>
           <ul>
             {cartItems.map((item, index) => (

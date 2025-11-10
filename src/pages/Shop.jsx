@@ -735,16 +735,16 @@ const Shop = () => {
     <>
       <Navbar />
       <section className="page-banner/title text-center py-6 mt-5">
-        <h1 className="text-5xl mb-2 font-bold">Shop</h1>
-        <p className="text-gray-600 mt-3 -mb-2 text-lg">
+        <h1 className="text-3xl mb-2 font-bold">Shop</h1>
+        <p className="text-gray-600 mt-3 -mb-2 text-md">
           Browse the latest gaming consoles and accessories
         </p>
       </section>
 
-      <section className="filter-bar flex flex-wrap gap-2 justify-center mb-10 py-2 px-4">
+      <section className="flex flex-wrap gap-2 justify-center mb-10 py-2 px-4 text-sm">
         <button
           onClick={() => setSelctedCategory("All")}
-          className="border border-black bg-gray-100 px-2 py-1 rounded"
+          className="border  border-black bg-gray-100 px-2 py-1 rounded"
         >
           All
         </button>
@@ -806,12 +806,12 @@ const Shop = () => {
             <img
               src={shop.shopProductImage}
               alt={shop.shopProductAlt}
-              className="w-full h-16 object-contain mb-4"
+              className="w-full h-16 object-contain"
             />
-            <h2 className="text-lg font-semibold mb-1">
-              {shop.shopProductName}
-            </h2>
-            <p className="text-gray-700 mb-3">{shop.shopProductPrice}</p>
+            <h2 className="text-sm mb-1">{shop.shopProductName}</h2>
+            <p className="text-gray-700 mb-3 text-sm">
+              {shop.shopProductPrice}
+            </p>
             <button className="bg-black text-white px-2 py-1 rounded hover:bg-gray-600 transition">
               {shop.shopProductButton}
             </button>

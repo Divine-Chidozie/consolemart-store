@@ -15,7 +15,7 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-2">Quick Links</h4>
           <nav>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm">
               <li>
                 <a href="/" className="hover:text-white transition">
                   Home
@@ -44,7 +44,7 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-2">Support & Info</h4>
           <nav>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm">
               <li>
                 <a href="/" className="hover:text-white transition">
                   FAQs
@@ -73,7 +73,7 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-2">Follow Us</h4>
           <nav>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm">
               <li>
                 <a href="/" className="hover:text-white transition">
                   Facebook

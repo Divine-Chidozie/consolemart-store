@@ -4,7 +4,7 @@ const Signup = () => {
     <section className="max-w-96 md:w-2/5 my-24 mx-auto flex flex-col justify-center items-center p-10 text-center shadow-lg drop-shadow-2xl shadow-slate-300">
       <div className="flex flex-col justify-center items-center mb-5 w-full">
         <h1 className="font-bold text-2xl">Sign Up Account</h1>
-        <p className="mt-3 text-base text-left">
+        <p className="mt-3 text-base text-center">
           Enter your persoanl details to create your account
         </p>
       </div>
@@ -34,9 +34,9 @@ const Signup = () => {
           className="w-full border-2 border-gray-800 py-1 pl-2 text-base  text-gray-700 outline-none mb-2"
         />
 
-        <a href="#" className="mb-3 text-sm mt-2 text-blue-700">
+        <Link to="/forgetpassword" className="mb-3 text-sm mt-2 text-blue-700">
           Forget password?
-        </a>
+        </Link>
 
         <button
           type="submit"

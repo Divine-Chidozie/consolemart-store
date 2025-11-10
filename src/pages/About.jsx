@@ -10,8 +10,8 @@ export default function About() {
       <div className="mt-16 bg-gray-50">
         {/* About Heading Section */}
         <section className="flex flex-col items-center">
-          <h1 className="text-3xl mb-2 text-black">About ConsoleMart</h1>
-          <p className="w-[90%] md:w-3/4 text-lg text-center mb-2">
+          <h1 className="text-2xl mb-2 text-black">About ConsoleMart</h1>
+          <p className="w-[95%] md:w-3/4 text-md text-center mb-2">
             At ConsoleMart, we're passionate about gaming. Since our founding,
             we've dedicated ourselves to providing top-quality consoles,
             accessories, and gaming experiences for players of all levels. Our
@@ -26,13 +26,13 @@ export default function About() {
         {/* Our Story Section */}
         <section className="flex flex-col items-center mt-14">
           <h2 className="text-2xl mb-2">Our Story</h2>
-          <p className="w-[90%] md:w-3/4 text-lg text-center mb-2">
+          <p className="w-[95%] md:w-3/4 text-md text-center mb-2">
             ConsoleMart was founded in 2022 by a team of gaming enthusiasts who
             wanted to create a one-stop destination for gamers in Nigeria. From
             PlayStation classics to the latest Nintendo Switch consoles, we
             source only the best for our community.
           </p>
-          <p className="w-[90%] md:w-3/4  text-lg text-center mb-2">
+          <p className="w-[95%] md:w-3/4  text-md text-center mb-2">
             Our mission began with a simple idea: combine quality products, fast
             delivery, and execellent customer service to give gamer the
             experience they deserve
@@ -77,35 +77,35 @@ export default function About() {
           <h2 className="text-2xl mb-2 text-center">Why Choose ConsoleMart?</h2>
           <div className="grid grid-row-4 gap-10 p-5 md:grid-cols-4 md:gap-5  w-11/12 my-0 mx-auto">
             <div className="rounded shadow-md shadow-gray-300 transition cursor-pointer py-2 px-4 hover:bg-[#111827] hover:text-white">
-              <h3 className="font-bold text-lg my-2">
+              <h3 className="font-medium text-base my-2">
                 Wide Range of Products →
               </h3>
-              <p>
+              <p className="text-sm">
                 From PlayStation to Nintendo, we have consoles and accessories
                 for every gamer.
               </p>
             </div>
 
             <div className="rounded shadow-md shadow-gray-300 transition cursor-pointer py-2 px-4 hover:bg-[#111827] hover:text-white">
-              <h3 className="font-bold text-lg my-2">
+              <h3 className="font-medium text-base my-2">
                 Fast & Reliable Delivery →
               </h3>
-              <p>
+              <p className="text-sm">
                 Get your gear delivered quickly and safely with our trusted
                 service.
               </p>
             </div>
 
             <div className="rounded shadow-md shadow-gray-300 transition cursor-pointer py-2 px-4 hover:bg-[#111827] hover:text-white">
-              <h3 className="font-bold text-lg my-2">24/7 Support →</h3>
-              <p>
+              <h3 className="font-medium text-md my-2">24/7 Support →</h3>
+              <p className="text-sm">
                 Our team is always ready to help you with questions or issues.
               </p>
             </div>
 
             <div className="rounded shadow-md shadow-gray-300 transition cursor-pointer py-2 px-4 hover:bg-[#111827] hover:text-white">
-              <h3 className="font-bold text-lg my-2">Affordable Prices →</h3>
-              <p>
+              <h3 className="font-medium text-md my-2">Affordable Prices →</h3>
+              <p className="text-sm">
                 We provide high-quality products at prices that won’t break your
                 wallet.
               </p>
@@ -119,16 +119,16 @@ export default function About() {
           <h2 className="text-2xl mb-5 text-center">What Our Gamers Say</h2>
           <section className="grid grid-cols-1 w-[95%] text-center md:w-8/12 m-auto gap-10">
             <div className="m-2 p-5 rounded shadow-lg border-gray-400">
-              <h4 className="font-bold text-lg my-2">Testimonal 1</h4>
-              <p>
+              <h4 className="font-medium text-md my-2">Testimonal 1</h4>
+              <p className="text-sm">
                 "I got my Xbox Series X within two days—amazing service!" –
                 David K.
               </p>
             </div>
 
             <div className="m-2 p-5 rounded shadow-lg border-gray-400">
-              <h4 className="font-bold text-lg my-2">Testimonal 2</h4>
-              <p>
+              <h4 className="font-medium text-md my-2">Testimonal 2</h4>
+              <p className="text-sm">
                 "ConsoleMart is my go-to store for gaming accessories. Highly
                 recommended!" – Chinwe A.
               </p>
@@ -140,10 +140,10 @@ export default function About() {
         {/* Call to Action Section */}
         <section className="mt-14">
           <div className="flex flex-col justify-center text-center items-center">
-            <h2 className="text-2xl mb-1">
+            <h2 className="text-2xl mb-2">
               Ready to Level up your Gaming Setup?
             </h2>
-            <p className="w-3/4 text-lg  mb-2">
+            <p className="w-3/4 text-sm mb-2">
               Browse our latest consoles, controllers, and accessories-all at
               unbeatable prices. Your next gaming adventure starts here
             </p>
