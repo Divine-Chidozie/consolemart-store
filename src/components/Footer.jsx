@@ -2,7 +2,12 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 px-6 py-12">
+    <footer
+      className="bg-gray-900 text-gray-300 px-6 py-12"
+      data-aos="fade-up"
+      data-aos-delay="1000"
+      data-aos-easing="ease-in-zine"
+    >
       {/* Top Grid Section */}
       <div className="grid md:grid-cols-4 gap-6">
         {/* Logo & Tagline */}

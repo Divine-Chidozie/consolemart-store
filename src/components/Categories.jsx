@@ -45,7 +45,7 @@ const Categories = () => {
   return (
     <>
       <section>
-        <div className="px-6 py-12 mt-28">
+        <div className="px-6 py-12 mt-28" data-aos="fade-up">
           <h2 className="text-xl font-normal mb-6 text-center">
             Explore by Catogory
           </h2>

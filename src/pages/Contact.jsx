@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -6,6 +8,13 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [nameError, setNameError] = useState("");
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -31,11 +40,12 @@ export default function Contact() {
   function handleEmailChange(event) {
     setEmail(event.target.value);
   }
+
   return (
     <>
       <Navbar />
       <section className="bg-gray-50">
-        <section className="flex flex-col items-center">
+        <section className="flex flex-col items-center" data-aos="fade-up">
           <h1 className="text-xl mb-2 text-black mt-14">Contact ConsoleMart</h1>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
             At ConsoleMart, we're always ready to assist our customers. Whether
@@ -45,7 +55,11 @@ export default function Contact() {
           </p>
         </section>
 
-        <section className="flex flex-col items-center mt-14">
+        <section
+          className="flex flex-col items-center mt-14"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <h2 className="text-xl mb-2">Get in Touch with Us</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
             Our customer service team is available to answer your questions
@@ -72,7 +86,11 @@ export default function Contact() {
           </ul>
         </section>
 
-        <section className="flex flex-col items-center mt-14">
+        <section
+          className="flex flex-col items-center mt-14"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           <h2 className="text-xl mb-2">Customer Support Hours</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
             We aim to respond to all enquires as fast as possible
@@ -88,7 +106,11 @@ export default function Contact() {
           </ul>
         </section>
 
-        <section className="flex flex-col items-center mt-14">
+        <section
+          className="flex flex-col items-center mt-14"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
           <h2 className="text-xl mb-2">Send Us a Message</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
             If you'd like to contact us directly, fill out the form below. Our
@@ -100,6 +122,8 @@ export default function Contact() {
             onSubmit={handleSubmit}
             action="form/api/contact-us"
             className="border border-black p-5 flex justify-center items-center flex-1 flex-col bg-gray-100 mt-4"
+            data-aos="fade-up"
+            data-aos-delay="600"
           >
             <div className="flex flex-col mb-2">
               <label className="text-sm mb-1">Full Name</label>
@@ -148,7 +172,11 @@ export default function Contact() {
           </form>
         </section>
 
-        <section className="flex flex-col items-center mt-14">
+        <section
+          className="flex flex-col items-center mt-14"
+          data-aos="fade-up"
+          data-aos-delay="800"
+        >
           <h2 className="text-xl mb-2">Connect on Social Media</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
             Join our gaming community online and never miss out on console

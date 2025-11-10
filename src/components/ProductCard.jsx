@@ -49,7 +49,11 @@ const ProductCard = () => {
 
   return (
     <section>
-      <div className="px-6 py-12  w-full">
+      <div
+        className="px-6 py-12  w-full"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         <h2 className="font-normal text-lg text-center mb-2">
           Featured Gaming Gear
         </h2>
@@ -107,7 +111,7 @@ const ProductCard = () => {
           <div className="col-span-full w-full flex justify-center">
             <button
               onClick={handleViewAllProducts}
-              className="col-span-full shadow-md shadow-gray-300 bg-black text-white w-[200px] py-2 px-8 rounded-lg hover:bg-zinc-400"
+              className="col-span-full shadow-lg shadow-gray-400 bg-black text-white w-[200px] py-2 px-8 rounded-lg hover:bg-zinc-400"
             >
               View All Products
             </button>

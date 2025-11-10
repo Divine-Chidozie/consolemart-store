@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -52,6 +54,14 @@ import gaming_chair from "../assets/gamingenviroment/gaming_chair.png";
 
 const Shop = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   const shops = [
     {
       id: 1,
@@ -734,14 +744,21 @@ const Shop = () => {
   return (
     <>
       <Navbar />
-      <section className="page-banner/title text-center py-6 mt-5">
+      <section
+        className="page-banner/title text-center py-6 mt-5"
+        data-aos="fade-up"
+      >
         <h1 className="text-3xl mb-2 font-bold">Shop</h1>
         <p className="text-gray-600 mt-3 -mb-2 text-md">
           Browse the latest gaming consoles and accessories
         </p>
       </section>
 
-      <section className="flex flex-wrap gap-2 justify-center mb-10 py-2 px-4 text-sm">
+      <section
+        className="flex flex-wrap gap-2 justify-center mb-10 py-2 px-4 text-sm"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         <button
           onClick={() => setSelctedCategory("All")}
           className="border  border-black bg-gray-100 px-2 py-1 rounded"
@@ -794,7 +811,11 @@ const Shop = () => {
           placeholder="Search here..."
         />
       </section>
-      <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-col-4 gap-6 p-4">
+      <section
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-col-4 gap-6 p-4"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
         {displayedProducts.map((shop, index) => (
           <div
             key={index}

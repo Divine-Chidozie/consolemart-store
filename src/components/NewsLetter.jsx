@@ -4,8 +4,7 @@ const NewsLetter = () => {
   const [input, setInput] = useState("");
   const handleForm = (event) => {
     event.preventDefault();
-    // console.log("Stay tuned for latest updates on new products.");
-    // alert("Coming soon! We're working hard to bring this feature online 🚧");
+    console.log("Stay tuned for latest updates on new products.");
   };
 
   function handleInput(event) {
@@ -13,9 +12,15 @@ const NewsLetter = () => {
   }
   return (
     <>
-      <section className="px-6 py-12 bg-gray-100 text-center">
-        <h4 className="text-2xl font-semibold">Subscribe to our Newsletter</h4>
-        <p>Get updates on new arrivals and exclusive deals</p>
+      <section
+        className="px-6 py-12 bg-gray-100 text-center"
+        data-aos="zoom-in"
+        data-aos-delay="800"
+      >
+        <h4 className="text-lg font-normal">Subscribe to our Newsletter</h4>
+        <p className="font-light text-sm">
+          Get updates on new arrivals and exclusive deals
+        </p>
 
         <form
           onSubmit={handleForm}

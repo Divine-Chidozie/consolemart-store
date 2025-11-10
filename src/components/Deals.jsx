@@ -1,12 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import dealDiscountImage from "../assets/dealDiscountImage.jpg";
 
 const Deals = () => {
+  const navigate = useNavigate();
   const discountImg = {
-    width: "300px",
+    width: "280px",
   };
 
   const handleShop = () => {
-    console.log(`Special discount offer coming soon.. Stay turned!`);
+    navigate("/shop");
   };
   const dealsBackground = {
     backgroundColor: "#111827",
@@ -14,6 +16,8 @@ const Deals = () => {
   return (
     <>
       <section
+        data-aos="zoom-in-up"
+        data-oas-delay="600"
         className="px-6 py-12 bg-gradient-to-r text-white text-center"
         style={dealsBackground}
       >
@@ -26,12 +30,14 @@ const Deals = () => {
             />
           </div>
           <div className="">
-            <h2 className="text-2xl font-bold mb-2">Special Offer</h2>
-            <h4 className="font-semibold text-xl">20% off Controllers</h4>
-            <p className="text-lg">Save ₦50,000 when you buy as a bundle</p>
+            <h2 className="text-xl font-normal mb-1">Special Offer</h2>
+            <h4 className="font-light text-md">20% off Controllers</h4>
+            <p className="text-sm font-light">
+              Save ₦50,000 when you buy as a bundle
+            </p>
             <button
               onClick={handleShop}
-              className="bg-white text-black px-6 py-3 mt-4 rounded-lg font-bold hover:bg-gray-200 transition"
+              className="bg-white text-black px-4 py-2 mt-4 rounded-sm font-extralight text-sm hover:bg-gray-200 transition"
             >
               Shop Now
             </button>

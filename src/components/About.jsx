@@ -3,7 +3,11 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <section className="px-6 py-12 bg-gray-50">
+      <section
+        className="px-6 py-12 bg-gray-50"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="font-normal text-lg mb-4 w-full">
             Why Choose ConsoleMart?
