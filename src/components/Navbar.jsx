@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
+import consolemartlogo from "../assets/consolemartlogo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +17,9 @@ const Navbar = () => {
     return () => window.removeEventListener("storage", updateCartCount);
   }, []);
 
-  const logoWidth = { width: "30px" };
+  const logoWidth = {
+    width: "25px",
+  };
 
   return (
     <>
@@ -25,7 +27,14 @@ const Navbar = () => {
       <nav className="flex items-center justify-between px-6 py-5 bg-white shadow-md sticky top-0 z-50">
         {/* Logo */}
         <div>
-          <img style={logoWidth} src={logo} alt="Navbar gaming logo" />
+          <Link to="/">
+            <img
+              style={logoWidth}
+              src={consolemartlogo}
+              alt="Navbar gaming logo"
+              className="cursor-pointer"
+            />
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -42,6 +51,9 @@ const Navbar = () => {
           <li className="hover:text-blue-500 transition">
             <Link to="/contact">Contact</Link>
           </li>
+          {/* <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li> */}
         </ul>
 
         {/* Desktop Right Side */}
@@ -103,6 +115,9 @@ const Navbar = () => {
           <li className="hover:text-blue-500 transition w-full">
             <Link to="/contact">Contact</Link>
           </li>
+          {/* <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li> */}
         </ul>
 
         {/* Cart and Sign In */}

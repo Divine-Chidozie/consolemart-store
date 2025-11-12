@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png";
+import consolemartlogo from "../assets/consolemartlogo.png";
 
 const Footer = () => {
   return (
@@ -12,7 +12,11 @@ const Footer = () => {
       <div className="grid md:grid-cols-4 gap-6">
         {/* Logo & Tagline */}
         <div>
-          <img className="w-14 mb-4" src={logo} alt="footer logo image" />
+          <img
+            className="w-8 mb-4"
+            src={consolemartlogo}
+            alt="footer logo image"
+          />
           <p>Your #1 Gaming Store</p>
         </div>
 

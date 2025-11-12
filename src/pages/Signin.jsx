@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 
 const Signin = () => {
@@ -7,6 +9,13 @@ const Signin = () => {
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
   // const navigate = useNavigate();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   const validateEmail = (value) => {
     if (!value.trim()) return "Please enter your email address";
@@ -49,8 +58,15 @@ const Signin = () => {
 
   return (
     <>
-      <section className="max-w-96 md:w-2/5 my-24 mx-auto flex flex-col justify-center items-center p-10 text-center shadow-lg drop-shadow-2xl shadow-slate-300">
-        <div className="flex flex-col justify-center items-center mb-5 w-full">
+      <section
+        className="max-w-96 md:w-2/5 my-24 mx-auto flex flex-col justify-center items-center p-10 text-center shadow-lg drop-shadow-2xl shadow-slate-300"
+        data-aos="fade-up"
+      >
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="flex flex-col justify-center items-center mb-5 w-full"
+        >
           <h1 className="font-bold text-2xl">Welcome Back!</h1>
           <p className="mt-1 text-base">Enter your login information</p>
         </div>

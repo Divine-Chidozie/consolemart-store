@@ -6,8 +6,11 @@ import Footer from "../components/Footer";
 
 export default function Contact() {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [nameError, setNameError] = useState("");
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [message, setMessage] = useState("");
+  const [messageError, setMessageError] = useState("");
 
   useEffect(() => {
     AOS.init({
@@ -16,31 +19,62 @@ export default function Contact() {
     });
   }, []);
 
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    let isValid = true;
-
-    if (!name.trim()) {
-      setNameError("Name can't be Empty");
-      isValid = false;
-    } else if (name.length < 5) {
-      setNameError("Name can't be less that 5 characters");
+  const validateName = (value) => {
+    if (!value.trim()) {
+      return "Please enter your name";
     }
-
-    if (isValid) {
-      console.log("Form working...", { name });
-    }
-  }
-
-  const handleNameChange = (event) => {
-    setName(event.target.value);
+    return "";
   };
 
-  function handleEmailChange(event) {
-    setEmail(event.target.value);
-  }
+  const validateEmail = (value) => {
+    if (!value.trim()) return "Please enter your email address";
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(value)) return "Please enter a valid email address";
+    return "";
+  };
 
+  function validateMessage(value) {
+    if (!value) {
+      return "Please enter your message";
+    }
+    return "";
+  }
+  validateMessage();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const nameErr = validateName(name);
+    const emailErr = validateEmail(email);
+    const messageErr = validateMessage(message);
+
+    setNameError(nameErr);
+    setEmailError(emailErr);
+    setMessageError(messageErr);
+
+    if (!nameErr && !emailErr) {
+      console.log("Form submitted successfully:", { name, email, message });
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
+  };
+
+  // 🔥 Clear errors when user types
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+    if (nameError) setNameError("");
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    if (emailError) setEmailError("");
+  };
+
+  function handleMessageChange(event) {
+    setMessage(event.target.value);
+    if (messageError) setMessageError("");
+  }
   return (
     <>
       <Navbar />
@@ -50,7 +84,7 @@ export default function Contact() {
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
             At ConsoleMart, we're always ready to assist our customers. Whether
             you want to make an enquiry, report an issue, or share your feedback
-            - we'd love to hear from you. Let's connect and make your gaming
+            — we'd love to hear from you. Let's connect and make your gaming
             experience even better.
           </p>
         </section>
@@ -93,7 +127,7 @@ export default function Contact() {
         >
           <h2 className="text-xl mb-2">Customer Support Hours</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
-            We aim to respond to all enquires as fast as possible
+            We aim to respond to all enquiries as fast as possible
           </p>
           <ul className="grid gap-1 shadow-gray-200 shadow-sm p-5 mt-3">
             <li className="bg-green-400 font-thin mb-1 px-2">
@@ -115,17 +149,16 @@ export default function Contact() {
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
             If you'd like to contact us directly, fill out the form below. Our
             team will reach out within 24 hours. Please provide accurate details
-            so we can respond efficiently
+            so we can respond efficiently.
           </p>
 
           <form
             onSubmit={handleSubmit}
-            action="form/api/contact-us"
             className="border border-black p-5 flex justify-center items-center flex-1 flex-col bg-gray-100 mt-4"
             data-aos="fade-up"
             data-aos-delay="600"
           >
-            <div className="flex flex-col mb-2">
+            <div className="flex flex-col mb-2 w-full">
               <label className="text-sm mb-1">Full Name</label>
               <input
                 onChange={handleNameChange}
@@ -134,38 +167,48 @@ export default function Contact() {
                 name="name"
                 className="w-full p-2 border border-gray-300 rounded-sm focus:outline-none"
               />
-
               {nameError && (
-                <p className="text-red-500 font-bold text-xs  mt-1">
+                <p className="text-red-500 font-bold text-xs mt-1">
                   {nameError}
                 </p>
               )}
             </div>
 
-            <div className="flex flex-col mb-2">
+            <div className="flex flex-col mb-2 w-full">
               <label className="text-sm mb-1">Email</label>
               <input
-                onChange={handleEmailChange}
                 value={email}
+                onChange={handleEmailChange}
                 type="text"
                 name="email"
                 className="w-full p-2 border border-gray-300 rounded-sm focus:outline-none"
               />
-              <p className="text-red-500 text-sm font-medium mt-1"></p>
+              {emailError && (
+                <p className="text-red-500 font-bold text-xs mt-1">
+                  {emailError}
+                </p>
+              )}
             </div>
 
-            <div className="flex flex-col mb-2">
+            <div className="flex flex-col mb-2 w-full">
               <label className="text-sm mb-1">Message</label>
               <textarea
+                onChange={handleMessageChange}
+                value={message}
                 name="message"
                 rows={3}
                 className="w-full p-2 border border-gray-300 rounded-sm focus:outline-none"
               ></textarea>
+              {messageError && (
+                <p className="text-red-500 font-bold text-xs mt-1">
+                  {messageError}
+                </p>
+              )}
             </div>
 
             <button
               type="submit"
-              className="border border-black py-1 px-2 font-semibold hover:text-white  hover:border-gray-50 hover:bg-green-800 transition"
+              className="border border-black py-1 px-2 font-semibold hover:text-white hover:border-gray-50 hover:bg-green-800 transition"
             >
               Submit Message
             </button>
@@ -187,14 +230,14 @@ export default function Contact() {
           <ul className="font-medium text-sm">
             <li>Facebook: @ConsoleMart</li>
             <li>Instagram: @ConsoleMart.ng</li>
-            <li>Twiiter: @ConsoleMartHQ</li>
+            <li>Twitter: @ConsoleMartHQ</li>
           </ul>
         </section>
 
         <section className="flex flex-col items-center mt-14">
           <h2 className="text-xl mb-2">Locate Our Store</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
-            Perfer a face-to-face experience? Visit our store or pickup center
+            Prefer a face-to-face experience? Visit our store or pickup center
             in Abakaliki. You can find us using the map below or through your
             preferred navigation app.
           </p>
@@ -204,16 +247,16 @@ export default function Contact() {
           <h2 className="text-xl mb-2">We Value Your Feedback</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
             Your opinion matters to us. ConsoleMart continues to grow by
-            listening to our customers. if you have suggestions or ideas for
+            listening to our customers. If you have suggestions or ideas for
             improving our services, we'd love to hear from you.
           </p>
         </section>
 
-        <section className="flex flex-col items-center mt-14">
+        <section className="flex flex-col items-center mt-14 mb-10">
           <h3 className="text-xl mb-2">Thank You Message</h3>
-          <p className="w-[95%] md:w-3/4 text-sm text-center mb-10">
-            Thank you for choosing ConsoleMart - where gaming meets quality,
-            affordablitiy, and execeptional customer support.
+          <p className="w-[95%] md:w-3/4 text-sm text-center">
+            Thank you for choosing ConsoleMart — where gaming meets quality,
+            affordability, and exceptional customer support.
           </p>
         </section>
       </section>

@@ -27,6 +27,7 @@ const Deals = () => {
               style={discountImg}
               src={dealDiscountImage}
               alt="special offer discount"
+              data-aos="zoom-in"
             />
           </div>
           <div className="">
