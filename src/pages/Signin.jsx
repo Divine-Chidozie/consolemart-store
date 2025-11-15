@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init({
@@ -51,9 +51,36 @@ const Signin = () => {
     setPasswordError(passwordErr);
 
     if (!emailErr && !passwordErr) {
-      console.log("Form submitted successfully! Logging you in...");
-      // API call goes here
+      console.log("Form submitted successfully! Logging you in...", {
+        email,
+        password,
+      });
     }
+
+    // Fetch saved User data from signUp
+
+    if (emailErr || passwordErr) return;
+    const savedUser = JSON.parse(localStorage.getItem("user"));
+    if (
+      savedUser &&
+      savedUser.userEmail === email &&
+      savedUser.userPassword === password
+    ) {
+      console.log("User logged in successfully");
+      navigate("/shop");
+    } else {
+      setPasswordError("Incorrect email or password");
+      return;
+    }
+
+    const userSignIn = {
+      userEmail: email,
+      userPassword: password,
+    };
+    const saveUserLogIn = localStorage.setItem(
+      "userSignIn",
+      JSON.stringify(userSignIn)
+    );
   };
 
   return (
@@ -109,7 +136,8 @@ const Signin = () => {
             type="submit"
             className="bg-black w-full text-white py-2 px-4 text-center"
           >
-            <Link to="/checkout">Login</Link>
+            {/* <Link to="/shop">Login</Link> */}
+            Login
           </button>
         </form>
         <p className="font-normal mt-2 text-sm">

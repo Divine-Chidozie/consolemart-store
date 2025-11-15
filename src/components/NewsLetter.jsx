@@ -2,14 +2,21 @@ import { useState } from "react";
 
 const NewsLetter = () => {
   const [input, setInput] = useState("");
+
   const handleForm = (event) => {
     event.preventDefault();
-    console.log("Stay tuned for latest updates on new products.");
+
+    function subscribeNotification() {
+      alert("Subscription successful! Stay tuned for hot deals and hot news..");
+    }
+
+    setTimeout(subscribeNotification, 1000);
   };
 
   function handleInput(event) {
     setInput(event.target.value);
   }
+
   return (
     <>
       <section

@@ -113,7 +113,7 @@ export default function Contact() {
               <strong className="font-normal">WhatsApp:</strong> +234 901 234
               5678
             </li>
-            <li className="flex flex-col items-center p-1 text-sm">
+            <li className="flex flex-col items-center p-1 text-sm text-center">
               <strong className="font-normal">Office Address:</strong> 24 Tech
               Avenue, Mile 50, Abakaliki, Ebonyi State, Nigeria
             </li>
