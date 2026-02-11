@@ -52,7 +52,7 @@ export default function Contact() {
     setEmailError(emailErr);
     setMessageError(messageErr);
 
-    if (!nameErr && !emailErr) {
+    if (!nameErr && !emailErr && !messageErr) {
       console.log("Form submitted successfully:", { name, email, message });
       setName("");
       setEmail("");
@@ -114,8 +114,8 @@ export default function Contact() {
               5678
             </li>
             <li className="flex flex-col items-center p-1 text-sm text-center">
-              <strong className="font-normal">Office Address:</strong> 24 Tech
-              Avenue, Mile 50, Abakaliki, Ebonyi State, Nigeria
+              <strong className="font-normal">Office Address:</strong> 24
+              Admiralty way, Lekki Phase 1, Lagos, Nigeria
             </li>
           </ul>
         </section>
@@ -237,9 +237,8 @@ export default function Contact() {
         <section className="flex flex-col items-center mt-14">
           <h2 className="text-xl mb-2">Locate Our Store</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
-            Prefer a face-to-face experience? Visit our store or pickup center
-            in Abakaliki. You can find us using the map below or through your
-            preferred navigation app.
+            Perfer a face-to-face experience? Visit our store or pickup center
+            in Lekki, Lagos.
           </p>
         </section>
 
