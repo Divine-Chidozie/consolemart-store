@@ -15,7 +15,7 @@ export const ForgetPassword = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.error("Form clicked");
+    console.error("Form clicked, process the form submission here.");
   }
 
   return (
