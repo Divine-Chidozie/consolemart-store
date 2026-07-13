@@ -6,6 +6,8 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [cartCount, setCartCount] = useState(0);
 
+
+
   useEffect(() => {
     const updateCartCount = () => {
       const savedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -32,7 +34,7 @@ const Navbar = () => {
               style={logoWidth}
               src={consolemartlogo}
               alt="Navbar gaming logo"
-              className="cursor-pointer"
+              className="cursor-pointer rounded-full"
             />
           </Link>
         </div>

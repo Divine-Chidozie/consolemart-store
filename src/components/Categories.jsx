@@ -9,10 +9,10 @@ const Categories = () => {
   const categories = [
     {
       categoryImage: playstation5,
-      categoryName: "Play Station",
+      categoryName: "PlayStation",
       categorieAlt: "play station",
       tagLine:
-        "Experience the world of PlayStation-form PS3 classics to the latest PS5",
+        "Explore the PlayStation ecosystem - from iconic classics to the latest PS5 experience built form immersive gaming",
     },
 
     {
@@ -20,21 +20,22 @@ const Categories = () => {
       categoryName: "Xbox Series",
       categorieAlt: "xbox series",
       tagLine:
-        "Unleash next-gen performance with Xbox consoles and accessories",
+        "Experience powerful next-gen performance with Xbox consoles built for speed, graphics, and competitive gameplay.",
     },
     {
       categoryImage: nintendoswitch,
       categoryName: "Nintendo Switch",
       categorieAlt: "nintendo switch",
-      tagLine: "Play anywhere, anytime-discover the joy of Nintendo gaming",
+      tagLine:
+        "Enjoy gaming anywhere with Nintendo Switch — flexible, fun, and perfect for both solo and multiplayer adventures.",
     },
 
     {
       categoryImage: playstation4,
-      categoryName: "accessories",
+      categoryName: "Accessories",
       categorieAlt: "accessories",
       tagLine:
-        "Find controllers, headsets, and everything you need to stay in the game",
+        "Upgrade your setup with premium controllers, headsets, and essential gaming accessories for peak performance.",
     },
   ];
 
@@ -46,8 +47,8 @@ const Categories = () => {
     <>
       <section>
         <div className="px-6 py-12 mt-28" data-aos="fade-up">
-          <h2 className="text-xl font-normal mb-6 text-center">
-            Explore by Catogory
+          <h2 className="text-2xl font-normal mb-6 text-center text-white">
+            Explore by Category
           </h2>
           <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 cursor-pointer w-full ">
             {categories.map((categorie, index) => (
@@ -60,10 +61,10 @@ const Categories = () => {
                   src={categorie.categoryImage}
                   alt={categorie.categorieAlt}
                 />
-                <p className="font-normal text-sm w-full text-center">
+                <p className="font-normal text-sm w-full text-center text-white">
                   {categorie.categoryName}
                 </p>
-                <p className="text-sm font-light text-center w-full">
+                <p className="text-sm font-light text-center w-full text-white">
                   {categorie.tagLine}
                 </p>
               </div>
@@ -72,9 +73,9 @@ const Categories = () => {
             <div className="col-span-full w-full flex justify-center">
               <button
                 onClick={handleShowAllPlayStation}
-                className="bg-black shadow-lg shadow-gray-400 text-white w-[200px] mt-3 py-2 px-8 rounded-lg hover:bg-zinc-400 transition"
+                className="bg-black  text-white w-[200px] mt-3 py-2 px-8 rounded-sm hover:bg-zinc-500 hover:font-normal transition"
               >
-                All Consoles
+                View All Consoles
               </button>
             </div>
           </div>

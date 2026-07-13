@@ -9,7 +9,6 @@ const NewsLetter = () => {
     function subscribeNotification() {
       alert("Subscription successful! Stay tuned for hot deals and hot news..");
     }
-
     setTimeout(subscribeNotification, 1000);
   };
 
@@ -24,9 +23,10 @@ const NewsLetter = () => {
         data-aos="zoom-in"
         data-aos-delay="800"
       >
-        <h4 className="text-lg font-normal">Subscribe to our Newsletter</h4>
+        <h4 className="text-lg font-normal">Join the GameVault Insider List</h4>
         <p className="font-light text-sm">
-          Get updates on new arrivals and exclusive deals
+          Be the first to know about new arrivals, exclusive deals, and
+          limited-time gaming offers.
         </p>
 
         <form
@@ -36,13 +36,13 @@ const NewsLetter = () => {
           <input
             onChange={handleInput}
             value={input}
-            className="flex-1 border border-zinc-200 px-4 py-2 rounded-1-lg outline-none"
+            className="flex-1 border border-zinc-200 px-4 py-2 outline-none"
             type="text"
             placeholder="Enter your email..."
           />
           <button
             type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded-1-lg hover:bg-blue-700"
+            className="bg-black text-white px-4 py-2 rounded-1-lg hover:bg-gray-400 hover:transition"
           >
             Subscribe
           </button>

@@ -25,14 +25,13 @@ export default function About() {
             data-aos="zoom-in"
             data-aos-delay="200"
           >
-            About ConsoleMart
+            About GameVault
           </h1>
           <p className="w-[95%] md:w-3/4 text-md text-center mb-2">
-            At ConsoleMart, we're passionate about gaming. Since our founding,
-            we've dedicated ourselves to providing top-quality consoles,
-            accessories, and gaming experiences for players of all levels. Our
-            goal is simple: make gaming accessible, exciting, and reliable for
-            everyone.
+            GameVault is your trusted destination for premium gaming consoles,
+            accessories, and gaming essentials. We are committed to delivering
+            quality products, competitive pricing, and a seamless shopping
+            experience for gamers of all levels.
           </p>
           <button className="bg-green-600 text-white font-serif font-thin py-2 px-4">
             <Link to="/shop">Browse Our Products →</Link>
@@ -49,10 +48,10 @@ export default function About() {
             Our Story
           </h2>
           <p className="w-[95%] md:w-3/4 text-md text-center mb-2">
-            ConsoleMart was founded in 2022 by a team of gaming enthusiasts who
-            wanted to create a one-stop destination for gamers in Nigeria. From
-            PlayStation classics to the latest Nintendo Switch consoles, we
-            source only the best for our community.
+            GameVault was created with a simple goal — to make premium gaming
+            products more accessible to gamers. From consoles and controllers to
+            accessories and storage solutions, we focus on offering products
+            that enhance every gaming experience.
           </p>
           <p className="w-[95%] md:w-3/4  text-md text-center mb-2">
             Our mission began with a simple idea: combine quality products, fast
@@ -75,8 +74,9 @@ export default function About() {
             >
               <h3 className="font-bold text-lg my-2">Mission</h3>
               <p className="w-full">
-                Deliver high-quality gaming consoles, accessories, and
-                experiences to players everywhere, quick and reliably
+                Tp provide gamers with high-quality consoles, accessories, and
+                gaming solutions backed by exceptional service and reliable
+                delivery.
               </p>
             </div>
 
@@ -87,8 +87,8 @@ export default function About() {
             >
               <h3 className="font-bold text-lg my-2">Vision</h3>
               <p className="w-full">
-                To be the go-to destination for gamers seeking the best geer and
-                support
+                To become the most trusted gaming marketplace, connecting gamers
+                with the products and support they need to play at their best.
               </p>
             </div>
 
@@ -97,9 +97,11 @@ export default function About() {
               data-aos="fade-left"
               data-aos-delay="400"
             >
-              <h3 className="w-full ">
-                Passion, Quality, Customer First, Innovation.
-              </h3>
+              <h3 className="w-full ">Our Values</h3>
+              <p className="w-full">
+                Passion for Gaming, Product Quality, Customer Satisfaction,
+                Innovation, and Reliability.
+              </p>
             </div>
 
             {/* add image here later: Use simple illustrative icons for Mission, Vision, and Values */}
@@ -111,37 +113,42 @@ export default function About() {
           <h2 className="text-2xl mb-2 text-center">Why Choose ConsoleMart?</h2>
           <div className="grid grid-row-4 gap-10 p-5 md:grid-cols-4 md:gap-5  w-11/12 my-0 mx-auto">
             <div className="rounded shadow-md shadow-gray-300 transition cursor-pointer py-2 px-4 hover:bg-[#111827] hover:text-white">
-              <h3 className="font-medium text-base my-2">
-                Wide Range of Products →
+              <h3 className="font-normal text-lg mb-2">
+                Curated Gaming Collection
               </h3>
-              <p className="text-sm">
-                From PlayStation to Nintendo, we have consoles and accessories
-                for every gamer.
+              <p className="text-sm font-light">
+                We carefully select consoles and accessories from top gaming
+                brands to ensure quality and performance
               </p>
             </div>
 
             <div className="rounded shadow-md shadow-gray-300 transition cursor-pointer py-2 px-4 hover:bg-[#111827] hover:text-white">
-              <h3 className="font-medium text-base my-2">
-                Fast & Reliable Delivery →
+              <h3 className="font-normal text-lg mb-2">
+                Fast & Secure Delivery
               </h3>
-              <p className="text-sm">
-                Get your gear delivered quickly and safely with our trusted
-                service.
+              <p className="text-sm font-light">
+                Get your gaming gear delivered safely and quickly, with reliable
+                logistics you can trust
               </p>
             </div>
 
             <div className="rounded shadow-md shadow-gray-300 transition cursor-pointer py-2 px-4 hover:bg-[#111827] hover:text-white">
-              <h3 className="font-medium text-md my-2">24/7 Support →</h3>
-              <p className="text-sm">
-                Our team is always ready to help you with questions or issues.
+              <h3 className="font-normal text-lg mb-2">Dedicated Support</h3>
+              <p className="text-sm font-light">
+                Our support team is always available to assist you with orders,
+                product questions, and updates
               </p>
             </div>
 
             <div className="rounded shadow-md shadow-gray-300 transition cursor-pointer py-2 px-4 hover:bg-[#111827] hover:text-white">
-              <h3 className="font-medium text-md my-2">Affordable Prices →</h3>
-              <p className="text-sm">
-                We provide high-quality products at prices that won’t break your
-                wallet.
+              <h3 className="font-normal text-lg mb-2 hover:text-white">
+                Built for Gamers, Designed for Performance
+              </h3>
+
+              <p className="text-gray-700 text-sm hover:text-white">
+                At GameVault, we believe gaming is more than entertainment —
+                it's an experience. We exist to make high-quality gaming
+                accessible, seamless, and enjoyable for everyone.
               </p>
             </div>
           </div>
@@ -149,7 +156,7 @@ export default function About() {
         </section>
 
         {/* Testimonials (Optional) Section */}
-        <section className="mt-14" data-aos="fade-up" data-aos-delay="600">
+        {/* <section className="mt-14" data-aos="fade-up" data-aos-delay="600">
           <h2 className="text-2xl mb-5 text-center">What Our Gamers Say</h2>
           <section className="grid grid-cols-1 w-[95%] text-center md:w-8/12 m-auto gap-10">
             <div className="m-2 p-5 rounded shadow-lg border-gray-400">
@@ -168,18 +175,18 @@ export default function About() {
               </p>
             </div>
           </section>
-          {/* Image Placeholder: Small avatar or gamer images. */}
-        </section>
+        </section> */}
 
         {/* Call to Action Section */}
         <section className="mt-14" data-aos="fade-up" data-aos-delay="800">
           <div className="flex flex-col justify-center text-center items-center">
             <h2 className="text-2xl mb-2">
-              Ready to Level up your Gaming Setup?
+              Ready to Upgrade Your Gaming Experience?
             </h2>
             <p className="w-3/4 text-sm mb-2">
-              Browse our latest consoles, controllers, and accessories-all at
-              unbeatable prices. Your next gaming adventure starts here
+              Discover the latest consoles, controllers, headsets, and gaming
+              accessories carefully selected for performance, quality, and
+              value.
             </p>
             <Link
               to="/shop"

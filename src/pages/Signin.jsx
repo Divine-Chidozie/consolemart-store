@@ -77,16 +77,19 @@ const Signin = () => {
       userEmail: email,
       userPassword: password,
     };
-    const saveUserLogIn = localStorage.setItem(
-      "userSignIn",
-      JSON.stringify(userSignIn)
-    );
+
+    localStorage.setItem("userSignIn", JSON.stringify(userSignIn));
+
+    // const saveUserLogIn = localStorage.setItem(
+    //   "userSignIn",
+    //   JSON.stringify(userSignIn),
+    // );
   };
 
   return (
     <>
       <section
-        className="max-w-96 md:w-2/5 my-24 mx-auto flex flex-col justify-center items-center p-10 text-center shadow-lg drop-shadow-2xl shadow-slate-300"
+        className="max-w-96 md:w-2/5 my-24 mx-auto flex flex-col justify-center items-center p-10 text-center bg-white rounded-xl shadow-xl border border-gray-100"
         data-aos="fade-up"
       >
         <div
@@ -94,8 +97,13 @@ const Signin = () => {
           data-aos-delay="200"
           className="flex flex-col justify-center items-center mb-5 w-full"
         >
-          <h1 className="font-bold text-2xl">Welcome Back!</h1>
-          <p className="mt-1 text-base">Enter your login information</p>
+          <div className="mb-5">
+            <h2 className="text-4xl font-bold text-gray-600">GameVault</h2>
+          </div>
+          <h1 className="font-bold text-lg">Welcome Back to GameVault!</h1>
+          <p className="mt-1 text-sm">
+            Sign in to manage your account, track orders, and continue shopping
+          </p>
         </div>
         <form
           onSubmit={handleSubmit}
@@ -105,7 +113,7 @@ const Signin = () => {
             type="email"
             value={email}
             onChange={handleEmailChange}
-            placeholder="✉️ Email Address"
+            placeholder="Enter your email address"
             className="w-full border-2 border-gray-800 py-1 pl-2 text-base  text-gray-700 outline-none mb-2"
           />
           {emailError && (
@@ -116,7 +124,7 @@ const Signin = () => {
             type="password"
             value={password}
             onChange={handlePasswordChange}
-            placeholder="🔒 Password"
+            placeholder="Enter your password"
             className="w-full border-2 border-gray-800 mb-1 py-1 pl-2  text-base text-gray-700 outline-none"
           />
           {passwordError && (
@@ -125,28 +133,38 @@ const Signin = () => {
             </p>
           )}
 
-          <Link
-            to="/forgetpassword"
-            className="mb-3 text-sm mt-2 text-blue-700"
-          >
-            Forget password?
-          </Link>
+          <div className="w-full flex justify-between items-center text-sm mb-3 mt-1">
+            <label className="flex items-center gap-2">
+              <input type="checkbox" />
+              Remember Me
+            </label>
+
+            <Link to="/forgetpassword" className="text-blue-700">
+              Forgot Password?
+            </Link>
+          </div>
+
+          <div className="w-full flex items-center my-4">
+            <div className="flex-1 h-px bg-gray-300"></div>
+            <span className="px-3 text-sm text-gray-500">OR</span>
+            <div className="flex-1 h-px bg-gray-300"></div>
+          </div>
 
           <button
             type="submit"
             className="bg-black w-full text-white py-2 px-4 text-center"
           >
             {/* <Link to="/shop">Login</Link> */}
-            Login
+            Sign In
           </button>
         </form>
         <p className="font-normal mt-2 text-sm">
-          New user?{" "}
+          Dont have an account?{" "}
           <Link
             to="/signup"
             className="text-base underline underline-offset-2 text-blue-700"
           >
-            create an account
+            create one
           </Link>
         </p>
       </section>

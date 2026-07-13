@@ -39,14 +39,25 @@ const Cart = () => {
       <Navbar />
       <div style={cartBackgroundColor}>
         <section className="text-white  py-5 px-10 flex flex-col justify-center items-center">
-          <h1 className="font-bold text-black text-3xl mb-4">Your Cart</h1>
+          <h1 className="font-bold text-black text-3xl mb-4">Shopping Cart</h1>
+          <p className="text-gray-600 mb-6">
+            Review your selected items before proceeding to checkout.
+          </p>
 
           {cartItems.length === 0 ? (
-            <p className="text-lg text-black">Your cart is empty...</p>
+            <div className="text-center">
+              <p className="text-lg text-black font-medium">
+                Your cart is currently empty...
+              </p>
+              <p className="text-gray-600 mt-2">
+                Browse our collection of gaming consoles and accessories to get
+                started.
+              </p>
+            </div>
           ) : (
             <ul>
               {cartItems.map((item, index) => (
-                <li
+                <h3
                   key={index}
                   className="my-2 py-2 px-4 shadow-lg  bg-slate-800 flex flex-row justify-between items-center rounded-md"
                 >
@@ -55,31 +66,33 @@ const Cart = () => {
                     onClick={() => handleRemove(item.id)}
                     className="bg-red-600 py-2 px-4 ml-5 hover:bg-red-500 hover:transition hover:border-none rounded-sm"
                   >
-                    Remove
+                    Remove Item
                   </button>
-                </li>
+                </h3>
               ))}
             </ul>
           )}
-          <section className="my-2 py-4 px-2 rounded flex flex-row justify-between items-center gap-14">
+          <section className=" my-2 py-4 px-2 rounded flex flex-row justify-between items-center gap-14">
             {cartItems.length > 0 && (
               <h2 className="font-semibold text-xl">
-                Total: ₦{totalPrice.toFixed(2)}
+                Order Total: ₦{totalPrice.toFixed(2)}
               </h2>
             )}
             <button>
+              {cartItems.length > 0 && (
               <Link
                 to="/checkout"
-                className="bg-green-600 py-2 px-4 rounded-sm hover:bg-green-500 hover:transition hover:border-none"
+                className="bg-green-600 py-2 px-4 rounded-sm hover:bg-green-500 hover:transition hover:border-none text-center"
               >
-                Checkout
+                Proceed to Checkout
               </Link>
+              )}
             </button>
           </section>
         </section>
         <div className="flex justify-center items-center gap-2 mt-2">
           <button className="bg-blue-700 py-2 px-4 ml-1 mb-3 text-white rounded-md">
-            <Link to="/shop">Back to Products</Link>
+            <Link to="/shop">Continue Shopping</Link>
           </button>
         </div>
       </div>

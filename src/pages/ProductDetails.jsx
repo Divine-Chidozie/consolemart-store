@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const ProductDetails = () => {
   const [quantity, setQuantity] = useState(1);
   const location = useLocation();
   const product = location.state?.product;
+  const navigate = useNavigate();
 
   if (!product) {
     return (
@@ -31,7 +33,7 @@ const ProductDetails = () => {
 
     const existingCart = JSON.parse(localStorage.getItem("cartItems")) || [];
     const index = existingCart.findIndex(
-      (item) => item.shopProductName === productToCart.shopProductName
+      (item) => item.shopProductName === productToCart.shopProductName,
     );
 
     if (index >= 0) {
@@ -47,32 +49,50 @@ const ProductDetails = () => {
 
   // const savedProduct = JSON.parse(localStorage.getItem("checkoutProduct")); // rememeber to move this code to the checkout page
 
-  const handleBuy = () => {
-    alert(`${quantity} ${product.shopProductName} bought`);
-    console.log("Remember to work on the checkout page...");
-  };
+  // const handleBuy = () => {
+  //   alert(`${quantity} ${product.shopProductName} bought`);
+  //   console.log("Remember to work on the checkout page...");
+  // };
 
+  const handleBuy = () => {
+    const buyNowItem = {
+      ...product,
+      quantity,
+    };
+
+    localStorage.setItem("checkoutItem", JSON.stringify(buyNowItem));
+    navigate("/checkout");
+  };
   return (
     <>
       <Navbar />
 
-      <section className="container mx-auto px-4 py-10 mt-10">
+      <section className="container mx-auto px-4 py-12 mt-10">
         <div className="grid md:grid-cols-2 gap-10">
           {/* Product Image */}
-          <div className="flex justify-center">
+          <div className="flex justify-center flex-col">
             <img
               src={product.shopProductImage}
               alt={product.shopProductName}
               className="w-full max-w-md object-contain rounded-lg shadow-md"
             />
+
+            <div className="mt-3">
+              <span className="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full">
+                Official GameVault Product
+              </span>
+            </div>
           </div>
 
           {/* Product Info */}
           <div>
-            <h1 className="text-3xl font-bold mb-3">
+            <h1 className="text-4xl font-bold mb-1 text-gray-900">
               {product.shopProductName}
             </h1>
-            <p className="text-xl font-semibold text-gray-800 mb-3">
+            <p className="text-sm text-green-600 font-medium mb-1">
+              GameVault Verified Product
+            </p>
+            <p className="text-2xl font-bold text-gray-900 mb-2">
               {product.shopProductPrice}
             </p>
             <p className="text-green-600 font-medium mb-3">In Stock</p>
@@ -83,26 +103,30 @@ const ProductDetails = () => {
 
             {/* Quantity + Buttons */}
             <div className="flex items-center gap-4 mb-6">
-              <div className="flex items-center border border-gray-300 rounded">
-                <button onClick={handleDecreaseQuantity} className="px-3 py-1">
+              <div className="flex items-center border border-gray-300 rounded-md overflow-hidden">
+                <button
+                  onClick={handleDecreaseQuantity}
+                  className="px-4 py-2 bg-gray-100 hover:bg-gray-200"
+                >
                   -
                 </button>
-                <span className="px-4 py-1 border-x border-gray-300">
-                  {quantity}
-                </span>
-                <button onClick={handleIncreaseQuantity} className="px-3 py-1">
+                <span className="px-5 py-2 bg-white">{quantity}</span>
+                <button
+                  onClick={handleIncreaseQuantity}
+                  className="px-4 py-2 bg-gray-100 hover:bg-gray-200"
+                >
                   +
                 </button>
               </div>
               <button
                 onClick={handleAddToCart}
-                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                className="bg-[#111827] text-white px-5 py-2 rounded-md hover:bg-black transition"
               >
                 🛒 Add to Cart
               </button>
               <button
                 onClick={handleBuy}
-                className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+                className="bg-green-600 text-white px-5 py-2 rounded-md hover:bg-green-700 transition"
               >
                 Buy Now
               </button>
@@ -118,9 +142,11 @@ const ProductDetails = () => {
         <div className="mt-12">
           <h2 className="text-2xl font-semibold mb-3">Product Description</h2>
           <p className="text-gray-700 leading-relaxed">
-            Experience premium gaming with {product.shopProductName}. This
+            {/* Experience premium gaming with {product.shopProductName}. This
             product offers high-quality performance and design for gamers of all
-            levels.
+            levels. */}
+            {product.description ||
+              `Experience premium gaming performance with ${product.shopProductName}. Built with gameplay, durability, and next-level gaming experience.`}
           </p>
         </div>
 
@@ -134,7 +160,9 @@ const ProductDetails = () => {
                 <li key={index}>{spec}</li>
               ))
             ) : (
-              <li>No Specifications available for this product.</li>
+              <li className="text-gray-400 italic">
+                Specification for this product are coming soon.
+              </li>
             )}
           </ul>
         </div>

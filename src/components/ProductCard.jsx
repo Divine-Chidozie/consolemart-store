@@ -10,14 +10,16 @@ const ProductCard = () => {
       productName: "PlayStation 5",
       productPrice: "₦850,000",
       productAlt: "PS5 console",
-      productButton: "🛒 +",
+      // productButton: "🛒 +",
+      productButton: "Add to Cart",
     },
     {
       productImage: featureProduct2,
       productName: "Xbox Series X",
       productPrice: "₦500,000",
       productAlt: "Xbox console",
-      productButton: "🛒 +",
+      // productButton: "🛒 +",
+      productButton: "Add to Cart",
     },
   ];
 
@@ -38,7 +40,7 @@ const ProductCard = () => {
 
   const handleAddToCart = (index) => {
     console.log(
-      `Added ${quantity[index]} ${products[index].productName}(s) to basket`
+      `Added ${quantity[index]} ${products[index].productName}(s) to basket`,
     );
   };
 
@@ -54,12 +56,12 @@ const ProductCard = () => {
         data-aos="fade-up"
         data-aos-delay="200"
       >
-        <h2 className="font-normal text-lg text-center mb-2">
-          Featured Gaming Gear
+        <h2 className="font-normal text-2xl text-white text-center mb-2">
+          Premium Gaming Picks
         </h2>
-        <p className="text-center mb-6 w-full text-sm">
-          Explore our top picks in gaming - from the latest consoles to
-          essential accessories
+        <p className="text-center text-white mb-6 w-full text-sm">
+          Discover high-performance consoles and accssories handpicked for
+          gamers who want quality, spreed, and immersive gameplay
         </p>
 
         <div className="grid grid-cols-1 w-full gap-5 sm:grid-cols-2 sm:w-full md:grid-cols-2 p-3 mx-auto md:w-full">
@@ -73,15 +75,17 @@ const ProductCard = () => {
                 src={product.productImage}
                 alt={product.productAlt}
               />
-              <h4 className="font-medium mt-2 text-center">
+              <h4 className="font-medium mt-2 text-center text-white">
                 {product.productName}
               </h4>
-              <p className="mt-1 text-center">{product.productPrice}</p>
+              <p className="mt-1 text-center text-white">
+                {product.productPrice}
+              </p>
 
               <div className="w-full text-center">
                 <button
                   onClick={() => handleDecrease(index)}
-                  className="bg-zinc-400 text-white px-2 rounded-lg mt-3 mr-2"
+                  className="bg-red-600 text-white px-2 rounded-sm mt-3 mr-2 hover:bg-zinc-600"
                 >
                   -
                 </button>
@@ -89,18 +93,18 @@ const ProductCard = () => {
                   disabled
                   value={quantity[index]}
                   type="text"
-                  className="border text-center w-6 mr-2 font-bold
+                  className="border text-center w-10 mr-2 font-medium bg-white
                   "
                 />
                 <button
                   onClick={() => handleIncrease(index)}
-                  className="bg-zinc-400 text-white font-bold px-2 rounded-lg mt-3 mr-2"
+                  className="bg-green-600 text-white font-bold px-2 rounded-sm mt-3 mr-2 hover:bg-zinc-600"
                 >
                   +
                 </button>
                 <button
                   onClick={() => handleAddToCart(index)}
-                  className="bg-black text-white py-1 px-4 rounded-lg mt-3 hover:bg-zinc-400 transition"
+                  className="bg-black text-white px-4 rounded-sm mt-3 hover:bg-zinc-400 transition"
                 >
                   {product.productButton}
                 </button>
@@ -111,7 +115,7 @@ const ProductCard = () => {
           <div className="col-span-full w-full flex justify-center">
             <button
               onClick={handleViewAllProducts}
-              className="col-span-full shadow-lg shadow-gray-400 bg-black text-white w-[200px] py-2 px-8 rounded-lg hover:bg-zinc-400"
+              className="col-span-full  bg-black text-white w-[200px] py-2 px-8 rounded-sm hover:bg-zinc-400"
             >
               View All Products
             </button>

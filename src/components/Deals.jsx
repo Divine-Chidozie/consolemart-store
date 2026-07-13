@@ -17,7 +17,7 @@ const Deals = () => {
     <>
       <section
         data-aos="zoom-in-up"
-        data-oas-delay="600"
+        data-aos-delay="600"
         className="px-6 py-12 bg-gradient-to-r text-white text-center"
         style={dealsBackground}
       >
@@ -31,14 +31,19 @@ const Deals = () => {
             />
           </div>
           <div className="">
-            <h2 className="text-xl font-normal mb-1">Special Offer</h2>
-            <h4 className="font-light text-md">20% off Controllers</h4>
+            <h2 className="text-xl font-normal mb-1">
+              GameVault Exclusive Deal
+            </h2>
+            <h4 className="font-light text-md">
+              Save Big on Premuim Controllers
+            </h4>
             <p className="text-sm font-light">
-              Save ₦50,000 when you buy as a bundle
+              Get up to 20% off select gaming controllers and save more when you
+              purchase bundled accessories
             </p>
             <button
               onClick={handleShop}
-              className="bg-white text-black px-4 py-2 mt-4 rounded-sm font-extralight text-sm hover:bg-gray-200 transition"
+              className="bg-white text-black px-4 py-2 mt-4 rounded-sm font-semibold text-sm hover:bg-gray-200 transition"
             >
               Shop Now
             </button>

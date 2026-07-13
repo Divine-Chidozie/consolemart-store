@@ -20,7 +20,7 @@ const Signup = () => {
       duration: 1000,
       once: true,
     });
-  });
+  }, []);
 
   function validateFirstName(value) {
     if (!value.trim()) {
@@ -75,7 +75,7 @@ const Signup = () => {
     if (!value.trim()) {
       return "Please enter a password";
     } else if (value.trim().length <= 5) {
-      return "Password must be more then 5 characters long";
+      return " Password must be at least 6 characters long";
     }
     return "";
   }
@@ -119,17 +119,26 @@ const Signup = () => {
       setEmail("");
       setPassword("");
     }
+
+    const existingUser = JSON.parse(localStorage.getItem("user"));
+
+    if (existingUser && existingUser.userEmail === email) {
+      setEmailError("An account with this email already exists");
+      return;
+    }
   };
 
   return (
     <section
-      className="max-w-96 md:w-2/5 my-24 mx-auto flex flex-col justify-center items-center p-10 text-center shadow-lg drop-shadow-2xl shadow-slate-300"
+      className="max-w-96 md:w-2/5 my-24 mx-auto flex flex-col justify-center items-center p-10 text-center bg-white rounded-xl shadow-xl border border-gray-100"
       data-aos="fade-down"
     >
       <div className="flex flex-col justify-center items-center mb-5 w-full">
-        <h1 className="font-bold text-2xl">Sign Up Account</h1>
-        <p className="mt-3 text-base text-center">
-          Enter your persoanl details to create your account
+        <h2 className="text-4xl font-bold text-gray-600 mb-2">GameVault</h2>
+        <h1 className="font-bold text-2xl">Create Your Account</h1>
+        <p className="mt-3 text-sm text-gray-600 text-center">
+          Join GameVault to save favorities, track orders, and enjoy a seamless
+          gaming experience
         </p>
       </div>
 
@@ -141,7 +150,7 @@ const Signup = () => {
           onChange={handleFirstNameChange}
           value={firstName}
           type="text"
-          placeholder="First Name"
+          placeholder="Enter your first name"
           className="w-full border-2 border-gray-800 py-1 pl-2 text-sm  text-gray-700 outline-none"
         />
         {firstNameError && (
@@ -153,7 +162,7 @@ const Signup = () => {
           onChange={handleLastNameError}
           value={lastName}
           type="text"
-          placeholder="Last Name"
+          placeholder="Enter your last name"
           className="w-full border-2 border-gray-800 py-1 pl-2 text-sm  text-gray-700 outline-none"
         />
 
@@ -164,7 +173,7 @@ const Signup = () => {
           onChange={handleEmail}
           value={email}
           type="email"
-          placeholder="Email Address"
+          placeholder="Enter your email address"
           className="w-full border-2 border-gray-800 py-1 pl-2 text-sm text-gray-700 outline-none"
         />
         {emailError && (
@@ -174,30 +183,31 @@ const Signup = () => {
           onChange={handlePassword}
           value={password}
           type="password"
-          placeholder="Password"
+          placeholder="Create a password"
           className="w-full border-2 border-gray-800 py-1 pl-2 text-sm text-gray-700 outline-none"
         />
         {passwordError && (
           <p className="text-red-500 font-bold text-xs mb-3">{passwordError}</p>
         )}
-        <Link to="/forgetpassword" className="mb-3 text-sm mt-2 text-blue-700">
-          Forget password?
-        </Link>
 
         <button
           type="submit"
           className="bg-black w-full text-white py-2 px-4 text-center"
         >
-          Sign Up
+          Create Account
         </button>
       </form>
+
+      <div className="w-full flex items-center my-2">
+        <div className="flex-1 h-px bg-gray-300"></div>
+        <span className="px-3 text-sm text-gray-500">OR</span>
+        <div className="flex-1 h-px bg-gray-300"></div>
+      </div>
+
       <p className="text-sm mt-2">
-        Already have an Account?{" "}
-        <Link
-          to="/signin"
-          className="text-base text-blue-700 underline underline-offset-2"
-        >
-          Sign in
+        Already have an account?{" "}
+        <Link to="/signin" className="text-blue-700 font-medium">
+          Sign In
         </Link>
       </p>
     </section>

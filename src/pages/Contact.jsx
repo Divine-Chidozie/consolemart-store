@@ -80,12 +80,11 @@ export default function Contact() {
       <Navbar />
       <section className="bg-gray-50">
         <section className="flex flex-col items-center" data-aos="fade-up">
-          <h1 className="text-xl mb-2 text-black mt-14">Contact ConsoleMart</h1>
+          <h1 className="text-xl mb-2 text-black mt-14">Contact GameVault</h1>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
-            At ConsoleMart, we're always ready to assist our customers. Whether
-            you want to make an enquiry, report an issue, or share your feedback
-            — we'd love to hear from you. Let's connect and make your gaming
-            experience even better.
+            Have a question about a product, order, or delivery? Our team is
+            here to help. Reach out to us and we we'll get back to you as soon
+            as possible.
           </p>
         </section>
 
@@ -96,26 +95,23 @@ export default function Contact() {
         >
           <h2 className="text-xl mb-2">Get in Touch with Us</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
-            Our customer service team is available to answer your questions
-            about consoles, accessories, orders, or deliveries. You can contact
-            us through the following channels:
+            Need assistance? Whether you're looking for product recommendations,
+            order updates, or technical support, our customer service team is
+            ready to assist.
           </p>
 
           <ul className="grid gap-1 shadow-gray-300 shadow-md p-5 mt-3">
             <li className="flex flex-col items-center p-1 text-sm">
               <strong className="font-normal">Email:</strong>{" "}
-              support@consolemart.com
+              support@gamevault.com
             </li>
             <li className="flex flex-col items-center p-1 text-sm">
-              <strong className="font-normal">Phone:</strong> +234 800 123 4567
+              <strong className="font-normal">Phone:</strong> Available upon
+              request
             </li>
-            <li className="flex flex-col items-center p-1 text-sm">
-              <strong className="font-normal">WhatsApp:</strong> +234 901 234
-              5678
-            </li>
+
             <li className="flex flex-col items-center p-1 text-sm text-center">
-              <strong className="font-normal">Office Address:</strong> 24
-              Admiralty way, Lekki Phase 1, Lagos, Nigeria
+              <strong className="font-normal">Location:</strong> Lagos, Nigeria
             </li>
           </ul>
         </section>
@@ -127,7 +123,8 @@ export default function Contact() {
         >
           <h2 className="text-xl mb-2">Customer Support Hours</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
-            We aim to respond to all enquiries as fast as possible
+            We strive to respond to all enquiries promptly during our business
+            hours.
           </p>
           <ul className="grid gap-1 shadow-gray-200 shadow-sm p-5 mt-3">
             <li className="bg-green-400 font-thin mb-1 px-2">
@@ -147,9 +144,9 @@ export default function Contact() {
         >
           <h2 className="text-xl mb-2">Send Us a Message</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
-            If you'd like to contact us directly, fill out the form below. Our
-            team will reach out within 24 hours. Please provide accurate details
-            so we can respond efficiently.
+            Send us a message and a member of our team will respond as soon as
+            possible. Please provide accurate information so we can assist you
+            effectively.
           </p>
 
           <form
@@ -210,7 +207,7 @@ export default function Contact() {
               type="submit"
               className="border border-black py-1 px-2 font-semibold hover:text-white hover:border-gray-50 hover:bg-green-800 transition"
             >
-              Submit Message
+              Send Message
             </button>
           </form>
         </section>
@@ -222,9 +219,8 @@ export default function Contact() {
         >
           <h2 className="text-xl mb-2">Connect on Social Media</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
-            Join our gaming community online and never miss out on console
-            deals, product updates, or giveaways. Follow ConsoleMart on your
-            favorite platforms:
+            Stay connected with GameVault for the latest product launches,
+            gaming updates, exclusive offers, and community news.
           </p>
 
           <ul className="font-medium text-sm">
@@ -237,25 +233,26 @@ export default function Contact() {
         <section className="flex flex-col items-center mt-14">
           <h2 className="text-xl mb-2">Locate Our Store</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
-            Perfer a face-to-face experience? Visit our store or pickup center
-            in Lekki, Lagos.
+            Prefer an in-person experience? Visit our store or pickup location
+            in Lagos to explore our products and speak directly with our team.
           </p>
         </section>
 
         <section className="flex flex-col items-center mt-14">
           <h2 className="text-xl mb-2">We Value Your Feedback</h2>
           <p className="w-[95%] md:w-3/4 text-sm text-center mb-2">
-            Your opinion matters to us. ConsoleMart continues to grow by
-            listening to our customers. If you have suggestions or ideas for
-            improving our services, we'd love to hear from you.
+            Your feedback helps us improve. We value every suggestion, review,
+            and recommendation shared by our customers and gaming community.
           </p>
         </section>
 
         <section className="flex flex-col items-center mt-14 mb-10">
-          <h3 className="text-xl mb-2">Thank You Message</h3>
-          <p className="w-[95%] md:w-3/4 text-sm text-center">
-            Thank you for choosing ConsoleMart — where gaming meets quality,
-            affordability, and exceptional customer support.
+          <h3 className="text-xl mb-2">Thank You for Choosing GameVault</h3>
+
+          <p className="w-[95%] md:w-3/4 text-center text-sm">
+            We appreciate your trust in GameVault. Our mission is to provide
+            gamers with quality products, reliable service, and an exceptional
+            shopping experience every time.
           </p>
         </section>
       </section>

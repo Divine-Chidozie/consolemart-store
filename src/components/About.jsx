@@ -9,9 +9,7 @@ const About = () => {
         data-aos-delay="400"
       >
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="font-normal text-lg mb-4 w-full">
-            Why Choose ConsoleMart?
-          </h2>
+          <h2 className="font-normal text-lg mb-4 w-full">About GameVault</h2>
           <p className="text-gray-700 mb-8 text-sm">
             At ConsoleMart, we believe gaming should be seamless, exciting, and
             affordable. That's why we bring top-quality consoles, fast delivery,
@@ -40,7 +38,9 @@ const About = () => {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-              <h3 className="font-normal text-lg mb-2">24/7 Support</h3>
+              <h3 className="font-normal text-lg mb-2">
+                Dedicated Customer Support
+              </h3>
               <p className="text-sm font-light">
                 We're always here to help you with any questions or issues.
               </p>

@@ -1,7 +1,43 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import consolemartlogo from "../assets/consolemartlogo.png";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  function handleShopNavigate() {
+    navigate("/shop");
+  }
+
+  const handleAboutNavigate = () => {
+    navigate("/about");
+  };
+
+  const handleContactNavigate = () => {
+    navigate("/contact");
+  };
+
+  // === Handle Support Info Alert Message ===
+  const handleFAQ = (e) => {
+    e.preventDefault();
+    alert("FAQs section is currently being updated. Please check back soon.");
+  };
+
+  function handleReturns(e) {
+    e.preventDefault();
+    alert("Return policy feature will be available soon.");
+  }
+
+  const handlePrivacyPolicy = (e) => {
+    e.preventDefault();
+
+    alert("Privacy policy is currently been updated.");
+  };
+
+  function handleTerms(e) {
+    e.preventDefault();
+    alert("Terms & Condition are currently being updated.");
+  }
+
   return (
     <footer
       className="bg-gray-900 text-gray-300 px-6 py-12"
@@ -15,12 +51,12 @@ const Footer = () => {
         <div>
           <Link to="/">
             <img
-              className="w-8 mb-4"
+              className="w-8 mb-4 rounded-full"
               src={consolemartlogo}
-              alt="footer logo image"
+              alt="GameVault Logo"
             />
           </Link>
-          <p>Your #1 Gaming Store</p>
+          <p>Premium Gaming Consoles & Accessories</p>
         </div>
 
         {/* Quick Links */}
@@ -33,18 +69,28 @@ const Footer = () => {
                   Home
                 </a>
               </li>
+
               <li>
-                <a href="/" className="hover:text-white transition">
+                <a
+                  onClick={handleShopNavigate}
+                  className="hover:text-white transition cursor-pointer"
+                >
                   Shop
                 </a>
               </li>
               <li>
-                <a href="/" className="hover:text-white transition">
+                <a
+                  onClick={handleAboutNavigate}
+                  className="hover:text-white transition cursor-pointer"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="/" className="hover:text-white transition">
+                <a
+                  onClick={handleContactNavigate}
+                  className="hover:text-white transition cursor-pointer"
+                >
                   Contact
                 </a>
               </li>
@@ -58,22 +104,38 @@ const Footer = () => {
           <nav>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/" className="hover:text-white transition">
+                <a
+                  onClick={handleFAQ}
+                  href="/"
+                  className="hover:text-white transition"
+                >
                   FAQs
                 </a>
               </li>
               <li>
-                <a href="/" className="hover:text-white transition">
+                <a
+                  onClick={handleReturns}
+                  href="/"
+                  className="hover:text-white transition"
+                >
                   Returns
                 </a>
               </li>
               <li>
-                <a href="/" className="hover:text-white transition">
+                <a
+                  onClick={handlePrivacyPolicy}
+                  href="/"
+                  className="hover:text-white transition"
+                >
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="/" className="hover:text-white transition">
+                <a
+                  onClick={handleTerms}
+                  href="/"
+                  className="hover:text-white transition"
+                >
                   Terms & Conditions
                 </a>
               </li>
@@ -87,17 +149,29 @@ const Footer = () => {
           <nav>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/" className="hover:text-white transition">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  className="hover:text-white transition"
+                >
                   Facebook
                 </a>
               </li>
               <li>
-                <a href="/" className="hover:text-white transition">
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  className="hover:text-white transition"
+                >
                   Twitter
                 </a>
               </li>
               <li>
-                <a href="/" className="hover:text-white transition">
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  className="hover:text-white transition"
+                >
                   Instagram
                 </a>
               </li>
@@ -108,7 +182,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="mt-8 border-t border-gray-700 pt-4 text-center">
-        <small>&copy; 2025 ConsoleMart. All Rights Reserved.</small>
+        <small>&copy; 2025 GameVault. All Rights Reserved.</small>
       </div>
     </footer>
   );

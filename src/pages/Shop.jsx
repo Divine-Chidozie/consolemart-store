@@ -66,10 +66,10 @@ const Shop = () => {
     {
       id: 1,
       shopProductImage: playstation3,
-      shopProductName: "Play Station 3",
+      shopProductName: "PlayStation 3",
       shopProductPrice: "₦160,000",
-      shopProductAlt: "play station 3 console",
-      shopProductButton: "🛒 +",
+      shopProductAlt: "playStation 3 console",
+      shopProductButton: "Add to Cart",
       category: "Consoles",
       description:
         "The PlayStation 3 (PS3) delivers smooth HD gaming and multimedia entertainment. It comes with a built-in Blu-ray player, online multiplayer via PlayStation Network, and a vast library of classic titles for endless fun and versatility.",
@@ -88,10 +88,10 @@ const Shop = () => {
     {
       id: 2,
       shopProductImage: playstation4,
-      shopProductName: "Play Station 4",
+      shopProductName: "PlayStation 4",
       shopProductPrice: "₦280,000",
-      shopProductAlt: "play station 4 console",
-      shopProductButton: "🛒 +",
+      shopProductAlt: "playStation 4 console",
+      shopProductButton: "Add to Cart",
       category: "Consoles",
       description:
         "Experience lightning-fast loading with the PS4's ultra-high-speed SSD, deeper immersion with haptic feedback, adaptive triggers, and stunning visuals with ray tracing",
@@ -105,13 +105,13 @@ const Shop = () => {
     {
       id: 3,
       shopProductImage: playstation5,
-      shopProductName: "Play Station 5",
+      shopProductName: "PlayStation 5",
       shopProductPrice: "₦850,000",
-      shopProductAlt: "play station 5 console",
-      shopProductButton: "🛒 +",
+      shopProductAlt: "playStation 5 console",
+      shopProductButton: "Add to Cart",
       category: "Consoles",
       description:
-        "The PlayStation 5 (PS5) delivers ultra-fast performance with its SSD, stunning 4K visuals, and immersive gameplay powered by the DualSense controller’s haptic feedback and adaptive triggers. Experience next-gen gaming like never before.",
+        "Experience next-generation gaming with ultra-fast performance, stunning 4K visuals, and immersive DualSense feedback designed to pull you deeper into every game.",
       specifications: [
         "Model: CFI-1215A",
         "Storage: 825GB SSD",
@@ -128,7 +128,7 @@ const Shop = () => {
       shopProductName: "Xbox Series X",
       shopProductPrice: "₦500,000",
       shopProductAlt: "xbox console",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Consoles",
       description:
         "The Xbox Series X delivers powerful next-gen gaming with ultra-fast load times, smooth 4K performance, and a sleek modern design. Enjoy true immersion with its custom SSD, advanced cooling, and backward compatibility for thousands of games.",
@@ -148,7 +148,7 @@ const Shop = () => {
       shopProductName: "Nintendo Switch",
       shopProductPrice: "₦350,000",
       shopProductAlt: "nintendo console",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Consoles",
       description:
         "The Nintendo Switch offers flexible gaming — play on your TV or take it on the go. With its hybrid design, detachable Joy-Con controllers, and an ever-growing library of exclusive titles, it delivers fun, family-friendly, and portable entertainment.",
@@ -169,7 +169,7 @@ const Shop = () => {
       shopProductName: "PS 3 Controller",
       shopProductPrice: "₦20,000",
       shopProductAlt: "ps3 controller",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Controllers",
       description:
         "The PlayStation 3 DualShock 3 controller delivers precise control and immersive gaming with its pressure-sensitive buttons and motion-sensing technology. Its wireless Bluetooth connection and built-in vibration feedback provide smooth and responsive gameplay for PS3 titles.",
@@ -189,7 +189,7 @@ const Shop = () => {
       shopProductName: "PS 4 Controller",
       shopProductPrice: "₦35,000",
       shopProductAlt: "ps4 controller",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Controllers",
       description:
         "The PlayStation 4 DualShock 4 controller offers precise control, immersive feedback, and a sleek design for comfortable gameplay. It features a built-in touchpad, light bar, motion sensors, and a headphone jack, enhancing both casual and competitive gaming experiences.",
@@ -210,7 +210,7 @@ const Shop = () => {
       shopProductName: "PS 5 controller",
       shopProductPrice: "₦65,000",
       shopProductAlt: "ps5 Controller",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Controllers",
       description:
         "The PlayStation 5 DualSense controller delivers a revolutionary gaming experience with adaptive triggers, haptic feedback, and a refined ergonomic design. It enhances immersion through responsive vibrations and precise motion controls, offering players a deeper connection to every game.",
@@ -232,7 +232,7 @@ const Shop = () => {
       shopProductName: "Xbox Controller",
       shopProductPrice: "₦120,000",
       shopProductAlt: "xbox controller",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Controllers",
       description:
         "The Xbox Wireless Controller offers precise control and exceptional comfort with a refined design, textured grips, and responsive triggers. It features seamless wireless connectivity, a hybrid D-pad, and easy pairing with consoles, PCs, and mobile devices for a smooth gaming experience.",
@@ -254,7 +254,7 @@ const Shop = () => {
       shopProductName: "Nintendo Controller",
       shopProductPrice: "₦70,000",
       shopProductAlt: "nintendo controller",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Controllers",
       description:
         "The Nintendo Switch Pro Controller provides a premium gaming experience with ergonomic design, precise motion controls, and HD rumble. It offers comfortable grip for long play sessions, long battery life, and seamless wireless connectivity to the Nintendo Switch console.",
@@ -277,7 +277,7 @@ const Shop = () => {
       shopProductName: "PS5 Wireless Headset",
       shopProductPrice: "₦350,000",
       shopProductAlt: "ps5 headset",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Headsets",
       description:
         "The PS5 Pulse 3D Wireless Headset is designed to deliver immersive 3D audio powered by the PlayStation 5’s Tempest 3D AudioTech. With refined ear pads, a hidden dual noise-cancelling microphone, and easy-access controls, it provides comfort and clarity for long gaming sessions.",
@@ -299,7 +299,7 @@ const Shop = () => {
       shopProductName: "PS4 Wireless Headset",
       shopProductPrice: "₦280,000",
       shopProductAlt: "ps4 headset",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Headsets",
       description:
         "The PS4 Gold Wireless Headset delivers powerful, immersive sound with 7.1 virtual surround audio. Designed for comfort and clarity, it features hidden noise-cancelling microphones, refined over-ear cushions, and easy-access controls, making it perfect for long gaming sessions on PS4 and PS5.",
@@ -318,10 +318,10 @@ const Shop = () => {
     {
       id: 13,
       shopProductImage: XboxStereoHeadset,
-      shopProductName: "Xbox Stero Headset",
+      shopProductName: "Xbox Stereo Headset",
       shopProductPrice: "₦250,000",
-      shopProductAlt: "xbox stero headset",
-      shopProductButton: "🛒 +",
+      shopProductAlt: "Xbox Stereo Headset",
+      shopProductButton: "Add to Cart",
       category: "Headsets",
       description:
         "The Xbox Stereo Headset delivers clear, detailed audio and exceptional comfort for long gaming sessions. It features high-quality 40mm drivers, an adjustable mic, and plush ear cushions for immersive gameplay. With easy plug-and-play setup via the 3.5mm jack, it’s perfect for Xbox consoles, PCs, and mobile devices.",
@@ -344,7 +344,7 @@ const Shop = () => {
       shopProductName: "Nintendo Switch Earbuds",
       shopProductPrice: "₦150,000",
       shopProductAlt: "nintendo switch earbuds",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Headsets",
       description:
         "The Nintendo Switch Earbuds are designed for portable and immersive gaming on the go. With clear stereo sound, an in-line microphone, and lightweight comfort, these earbuds make communication and gameplay seamless. Perfect for handheld or docked mode, they provide crisp audio whether you’re exploring Hyrule or racing in Mario Kart.",
@@ -367,7 +367,7 @@ const Shop = () => {
       shopProductName: "HyperX Cloud Gaming Headset",
       shopProductPrice: "₦900,000",
       shopProductAlt: "hyperX cloud gaming headset",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Headsets",
       description:
         "The HyperX Cloud Gaming Headset brings balance of comfort and performance for gamers. With plush memory-foam cushions, a durable aluminium frame, and crisp 53 mm drivers, it delivers immersive audio for PC, console and mobile gaming.",
@@ -390,7 +390,7 @@ const Shop = () => {
       shopProductName: "Dual Charging Station Play Station 5",
       shopProductPrice: "₦350,000",
       shopProductAlt: "Charging station play station 5",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Accessories",
       description:
         "The DualSense Charging Station lets you dock and charge up to two DualSense wireless controllers simultaneously—no need to connect them to your console. Its low-profile click-in design matches the PS5 aesthetic and frees up USB ports for other accessories.",
@@ -410,7 +410,7 @@ const Shop = () => {
       shopProductName: "Charging Dock Play Station 4",
       shopProductPrice: "₦200,000",
       shopProductAlt: "charging dock play station 4",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Accessories",
       description:
         "Charge and store your PS4 controllers with ease. This dock lets you snap two DualShock 4 controllers into place, keeps your gaming area tidy, and ensures you’re always ready to play.",
@@ -432,7 +432,7 @@ const Shop = () => {
       shopProductName: "Nintendo Switch Charging Grip",
       shopProductPrice: "₦140,000",
       shopProductAlt: "nintendo switch charging grip",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Accessories",
       description:
         "The Nintendo Switch Charging Grip lets you attach your Joy-Con controllers into a traditional gamepad shape while charging them via USB-C. Play comfortably and keep your controllers powered simultaneously.",
@@ -451,7 +451,7 @@ const Shop = () => {
       shopProductName: "Power Bank for Switch",
       shopProductPrice: "₦100,000",
       shopProductAlt: "power bank for switch",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Accessories",
       description:
         "This power bank for Nintendo Switch gives you extended playtime anywhere. With high-capacity battery backup and USB-C charging support, you can continue gaming on the go without worrying about running out of power.",
@@ -469,7 +469,7 @@ const Shop = () => {
       shopProductPrice: "₦70,000",
       shopProductName: "Xbox Rechargeable Battery Kit",
       shopProductAlt: "xbox rechargeable battery kit",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Accessories",
       description:
         "The Xbox Rechargeable Battery Kit replaces disposable AA batteries in your Xbox Wireless Controller with a high-capacity rechargeable pack. Charge via USB-C while you play or during standby — no more interrupting your session to change batteries.",
@@ -488,7 +488,7 @@ const Shop = () => {
       shopProductName: "PlayStation 5 NVMe SSD",
       shopProductPrice: "₦50,000",
       shopProductAlt: "playstation 5 NVMe SSD",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Storage",
       description:
         "Expand your PS5's storage with a high-speed NVMe SSD. Designed for seamless gameplay, it offers fast load times and ample space for your favorite titles.",
@@ -508,7 +508,7 @@ const Shop = () => {
       shopProductName: "External Hard Drive",
       shopProductPrice: "₦130,000",
       shopProductAlt: "external hard drive",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Storage",
       description:
         "Expand your Xbox storage effortlessly with this external hard drive. Offering ample capacity and seamless integration, it's perfect for storing and accessing your favorite games.",
@@ -528,7 +528,7 @@ const Shop = () => {
       shopProductName: "Nintendo Switch Memory Card",
       shopProductPrice: "₦20,000",
       shopProductAlt: "nintendo switch memory card",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Storage",
       description:
         "Expand your Nintendo Switch storage effortlessly with this officially licensed microSD card. Designed for seamless compatibility, it allows you to store more games and content without compromising performance.",
@@ -548,7 +548,7 @@ const Shop = () => {
       shopProductName: "PlayStation VR PS5",
       shopProductPrice: "₦250,000",
       shopProductAlt: "playstation vr ps5",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Virtual Reality",
       description:
         "Immerse yourself in next-gen virtual reality with the PlayStation VR2. Designed exclusively for PS5, it offers stunning visuals, intuitive controls, and a wide field of view for an unparalleled gaming experience.",
@@ -571,7 +571,7 @@ const Shop = () => {
       shopProductName: "PlayStation VR PS4",
       shopProductPrice: "₦200,000",
       shopProductAlt: "playstation vr ps4",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Virtual Reality",
       description:
         "Experience immersive virtual reality gaming with the PlayStation VR headset. Designed for PlayStation 4, it offers a seamless blend of comfort, high-quality visuals, and intuitive controls for an unparalleled gaming experience.",
@@ -590,7 +590,7 @@ const Shop = () => {
       shopProductName: "PlayStation Camera VR",
       shopProductPrice: "₦120,000",
       shopProductAlt: "playstation camera vr",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Virtual Reality",
       description:
         "The PlayStation Camera enhances your PS VR experience by tracking your head movements and motion controllers, enabling immersive virtual reality gameplay on PS4.",
@@ -610,7 +610,7 @@ const Shop = () => {
       shopProductName: "Xbox Kinect",
       shopProductPrice: "₦90,000",
       shopProductAlt: "xbox kinect",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Virtual Reality",
       description:
         "The Xbox Kinect is a motion-sensing device that allows players to interact with games using body movements, gestures, and voice commands, providing an immersive gaming experience without a controller.",
@@ -631,7 +631,7 @@ const Shop = () => {
       shopProductName: "Console Cooling Stand",
       shopProductPrice: "₦65,000",
       shopProductAlt: "console cooling stand",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Accessories",
       description:
         "Enhance your gaming setup with this multifunctional cooling stand. Designed to keep your console cool during extended gaming sessions, it also offers charging capabilities and additional storage options.",
@@ -649,7 +649,7 @@ const Shop = () => {
       shopProductName: "Dust Cover PS5",
       shopProductPrice: "₦35,000",
       shopProductAlt: "dust cover ps5",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Accessories",
       description:
         "Protect your PS5 console from dust, scratches, and minor spills with this custom-fit dust cover. Designed for both vertical and horizontal placements, it ensures your console stays clean and safe when not in use.",
@@ -667,7 +667,7 @@ const Shop = () => {
       shopProductName: "Nintendo Switch Case",
       shopProductPrice: "₦40,000",
       shopProductAlt: "nintendo switch case",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Accessories",
       description:
         "Protect and transport your Nintendo Switch with this official carrying case, featuring a durable exterior, padded interior, and storage for games and accessories.",
@@ -685,7 +685,7 @@ const Shop = () => {
       shopProductName: "Gaming Chair",
       shopProductPrice: "₦250,000",
       shopProductAlt: "gaming chair ",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Accessories",
       description:
         "Enhance your gaming experience with this ergonomic gaming chair, designed for comfort during long sessions. Features adjustable armrests, lumbar support, and a reclining backrest.",
@@ -703,7 +703,7 @@ const Shop = () => {
       shopProductName: "Vertical Stand PS5",
       shopProductPrice: "₦50,000",
       shopProductAlt: "vertical stand ps5",
-      shopProductButton: "🛒 +",
+      shopProductButton: "Add to Cart",
       category: "Accessories",
       description:
         "Secure your PS5 console in an upright position with this official vertical stand, ensuring stability and optimal airflow.",
@@ -723,11 +723,11 @@ const Shop = () => {
   const displayedProducts =
     searchText.trim() !== ""
       ? shops.filter((shop) =>
-          shop.shopProductName.toLowerCase().includes(searchText.toLowerCase())
+          shop.shopProductName.toLowerCase().includes(searchText.toLowerCase()),
         )
       : selectedCategory === "All"
-      ? shops
-      : shops.filter((shop) => shop.category === selectedCategory);
+        ? shops
+        : shops.filter((shop) => shop.category === selectedCategory);
 
   const handleControllers = () => {
     setSelctedCategory("Controllers");
@@ -748,9 +748,10 @@ const Shop = () => {
         className="page-banner/title text-center py-6 mt-5"
         data-aos="fade-up"
       >
-        <h1 className="text-3xl mb-2 font-bold">Shop</h1>
+        <h1 className="text-3xl mb-2 font-bold">Gaming Store</h1>
         <p className="text-gray-600 mt-3 -mb-2 text-md">
-          Browse the latest gaming consoles and accessories
+          Explore consoles, controllers, and premium gaming accessories built
+          for performance and immersion.
         </p>
       </section>
 
@@ -763,13 +764,13 @@ const Shop = () => {
           onClick={() => setSelctedCategory("All")}
           className="border  border-black bg-gray-100 px-2 py-1 rounded"
         >
-          All
+          All Products
         </button>
         <button
           onClick={() => setSelctedCategory("Consoles")}
           className="border border-black bg-gray-100  px-3 py-1 rounded"
         >
-          Consoles
+          Gaming Consoles
         </button>
         <button
           onClick={handleControllers}
@@ -781,25 +782,25 @@ const Shop = () => {
           onClick={handleHeadsets}
           className="border border-black bg-gray-100 px-3 py-1 rounded"
         >
-          Headsets
+          Audio & Headsets
         </button>
         <button
           onClick={() => setSelctedCategory("Virtual Reality")}
           className="border border-black bg-gray-100 px-3 py-1 rounded"
         >
-          VR
+          Virtual Reality
         </button>
         <button
           onClick={() => setSelctedCategory("Storage")}
           className="border border-black bg-gray-100 px-3 py-1 rounded"
         >
-          Storage
+          Storage & Memory
         </button>
         <button
           onClick={handleAccessories}
           className="border border-black bg-gray-100 px-3 py-1 rounded"
         >
-          Accessories
+          Accessories & Gear
         </button>
 
         <input
@@ -808,11 +809,11 @@ const Shop = () => {
           id="search-button"
           className="border border-black px-3 py-1 rounded outline-none"
           type="search"
-          placeholder="Search here..."
+          placeholder="Search gaming products..."
         />
       </section>
       <section
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-col-4 gap-6 p-4"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 p-4"
         data-aos="fade-up"
         data-aos-delay="400"
       >

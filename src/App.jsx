@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import { ForgetPassword } from "./pages/ForgetPassword";
 import NotFound from "./pages/NotFound";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 // Dashboard
 // import Dashboard from "./pages/dashboard/Dashboard";
@@ -30,6 +31,7 @@ function App() {
       <Route path="/forgetpassword" element={<ForgetPassword />} />
       <Route path="*" element={<NotFound />} />
       {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );
 }
