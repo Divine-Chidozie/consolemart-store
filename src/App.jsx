@@ -11,7 +11,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import { ForgetPassword } from "./pages/ForgetPassword";
 import NotFound from "./pages/NotFound";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 // Dashboard
 // import Dashboard from "./pages/dashboard/Dashboard";
